@@ -1,0 +1,662 @@
+Plot()
+{
+  Curve("Atmospheric","intcal20.14c");
+  Outlier_Model("General", T(5), U(0,4), "t");
+
+  Phase("M3 transition-core baseline")
+  {
+    // ============================================================
+    // 1) COMPLETE CONSOLIDATED LOCAL MODELS
+    // ============================================================
+
+  Sequence("Abric Romani — full sequence structural consolidado v1")
+  {
+    Boundary("Start AR Carbonate above J");
+    Phase("AR Carbonate above J")
+    {
+      Date("AR U-series 50400±2600", N(calBP(50400), 2600))
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR Age Carbonate above J");
+    };
+    Boundary("End AR Carbonate above J");
+
+    Boundary("Start AR Level J");
+    Phase("AR Level J")
+    {
+      R_Date("NZA-2316", 47100, 2100)
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR Age Level J");
+    };
+    Boundary("End AR Level J");
+
+    Boundary("Start AR Travertine J-I");
+    Phase("AR Travertine J-I")
+    {
+      Date("AR J-I U-series 46500±1500", N(calBP(46500), 1500))
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR J-I U-series 48600±2300", N(calBP(48600), 2300))
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR J-I U-series 46900±2600", N(calBP(46900), 2600))
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR J-I U-series 46300±2400", N(calBP(46300), 2400))
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR J-I U-series 48000±1600", N(calBP(48000), 1600))
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR J-I U-series 49200±3300", N(calBP(49200), 3300))
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR J-I U-series 47400±2500", N(calBP(47400), 2500))
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR J-I U-series 49300±2700", N(calBP(49300), 2700))
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR J-I U-series 49300±1600", N(calBP(49300), 1600))
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR J-I U-series 49200±2900", N(calBP(49200), 2900))
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR Age Travertine J-I");
+    };
+    Boundary("End AR Travertine J-I");
+
+    Boundary("Start AR Travertine H-I");
+    Phase("AR Travertine H-I")
+    {
+      Date("AR U-series 45100±3100", N(calBP(45100), 3100))
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR Age Travertine H-I");
+    };
+    Boundary("End AR Travertine H-I");
+
+    Boundary("Start AR Level H");
+    Phase("AR Level H")
+    {
+      R_Date("NZA-2315", 44500, 1200)
+      {
+        Outlier("General",0.05);
+      };
+      R_Date("CAMS_H", 44100, 5900)
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR Age Level H");
+    };
+    Boundary("End AR Level H");
+
+    Boundary("Start AR Level E");
+    Phase("AR Level E")
+    {
+      R_Date("NZA-2314", 43200, 1100)
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR Age Level E");
+    };
+    Boundary("End AR Level E");
+
+    Boundary("Start AR Carbonate below D");
+    Phase("AR Carbonate below D")
+    {
+      Date("AR U-series 44900±2500", N(calBP(44900), 2500))
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR Age Carbonate below D");
+    };
+    Boundary("End AR Carbonate below D");
+
+    Boundary("Start AR Level D");
+    Phase("AR Level D")
+    {
+      R_Date("NZA-2313", 40680, 940)
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR Age Level D");
+    };
+    Boundary("End AR Level D");
+
+    Boundary("Start AR Level B");
+    Phase("AR Level B")
+    {
+      // Se consolida como charcoal atmosférico de nivel B.
+      R_Date("OxA-12025", 39060, 350)
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR Age Level B");
+    };
+    Boundary("End AR Level B");
+
+    Boundary("Start AR Carbonates below A");
+    Phase("AR Carbonates below A")
+    {
+      Date("AR U-series 42500±200", N(calBP(42500), 200))
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR U-series 42700±200", N(calBP(42700), 200))
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR Age Carbonates below A");
+    };
+    Boundary("End AR Carbonates below A");
+
+    Boundary("Start AR Level A");
+    Phase("AR Level A")
+    {
+      R_Date("AA-8037B", 37900, 1000)
+      {
+        Outlier("General",0.05);
+      };
+      R_Date("NZA-2311", 36590, 640)
+      {
+        Outlier("General",0.05);
+      };
+      R_Date("AA-7395", 37290, 990)
+      {
+        Outlier("General",0.05);
+      };
+      R_Date("OxA-11967", 35900, 600)
+      {
+        Outlier("General",0.05);
+      };
+      R_Date("AA-6608", 36740, 920)
+      {
+        Outlier("General",0.05);
+      };
+      R_Date("UA1", 37200, 900)
+      {
+        Outlier("General",0.05);
+      };
+      R_Date("UA3", 37900, 1000)
+      {
+        Outlier("General",0.05);
+      };
+      // OxA-X-2095-46 queda fuera del core del baseline consolidado
+      // tras las sensibilidades marinas S2/S3.
+      Date("AR Age Level A");
+    };
+    Boundary("End AR Level A");
+
+    Boundary("Start AR Carbonates above A");
+    Phase("AR Carbonates above A")
+    {
+      R_Date("USGS-2839", 36300, 1300)
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR4 average age", N(calBP(42600), 1100))
+      {
+        Outlier("General",0.05);
+      };
+      Date("AR Age Carbonates above A");
+    };
+    Boundary("End AR Carbonates above A");
+
+    Boundary("End AR full sequence");
+  };
+
+  // FO_local_baseline_consolidado_v1
+  // Cova Foradada — modelo local consolidado para integración multisite
+  //
+  // Modelo seleccionado tras comparar:
+  // - FO_local_baseline_v2
+  // - FO_local_baseline_v2_S1_problematic_in
+  // - FO_local_baseline_v2_S2_SW_in
+  // - FO_local_baseline_v2_S3_SW_in_IIIc
+  // - FO_local_baseline_v2_S4_SW_in_IIIc_Beta378800_outlier20
+  //
+  // Solución consolidada adoptada:
+  // - núcleo IV-IV.1 basado en FO-009 + FO-010
+  // - exclusión de FO-008 (Beta-414539 AAA) y FO-011 (MAMS-33909)
+  // - adscripción preferente de FO-012 y FO-013 (SW Gallery) a IIIc
+  // - FO-005 (Beta-378800 AAA) mantenida con prior estándar 0.05
+  //
+  // Este es el modelo local que debe entrar en las secuencias multisite.
+
+
+  Sequence("FO_local_baseline_consolidado_v1")
+  {
+    // ------------------------------------------------------------
+    // Unit FO IV.1-IV (Chatelperronian) — consolidated core
+    // ------------------------------------------------------------
+    Boundary("Start FO Unit-IV.1-IV");
+    Phase("FO Unit-IV.1-IV (Chatelperronian)")
+    {
+      R_Combine("FO-009 subsample combine")
+      {
+        R_Date("FO-009 OxA-X-2649-9 AOx-SC", 34490, 320);
+        R_Date("FO-009 Beta-435465 AAA", 34570, 240);
+      };
+
+      R_Date("FO-010 OxA-X-2650-9 AOx-SC", 34300, 1000)
+      {
+        Outlier("General",0.35);
+      };
+
+      Date("FO Unit-IV.1-IV age");
+      Span("Span FO Unit-IV.1-IV");
+    };
+    Boundary("End FO Unit-IV.1-IV");
+
+    Interval("Gap FO Unit-IV.1-IV -> Unit-IIIc");
+
+    // ------------------------------------------------------------
+    // Unit FO IIIc (Early Aurignacian) — consolidated preferred scenario
+    // ------------------------------------------------------------
+    Boundary("Start FO Unit-IIIc");
+    Phase("FO Unit-IIIc (Early Aurignacian)")
+    {
+      R_Date("FO-013 OxA-34232 SW Gallery ABOx-SC", 32250, 380)
+      {
+        Outlier("General",0.20);
+      };
+
+      R_Date("FO-012 OxA-34250 SW Gallery ABOx-SC", 32260, 390)
+      {
+        Outlier("General",0.20);
+      };
+
+      R_Date("FO-005 Beta-378800 AAA", 30220, 180)
+      {
+        Outlier("General",0.05);
+      };
+
+      R_Date("FO-006 OxA-34233 ABOx-SC", 33170, 370)
+      {
+        Outlier("General",0.05);
+      };
+
+      R_Date("FO-007 OxA-34251 ABOx-SC", 32050, 550)
+      {
+        Outlier("General",0.05);
+      };
+
+      Date("FO Unit-IIIc age");
+      Span("Span FO Unit-IIIc");
+    };
+    Boundary("End FO Unit-IIIc");
+
+    Interval("Gap FO Unit-IIIc -> Unit-IIIn");
+
+    // ------------------------------------------------------------
+    // Unit FO IIIn (Initial Gravettian) — marine shell dates
+    // ------------------------------------------------------------
+    Boundary("Start FO Unit-IIIn");
+    Phase("FO Unit-IIIn (Initial Gravettian)")
+    {
+      Delta_R("FO IIIn Delta_R", -42, 30);
+
+      R_Date("FO-003 OxA-24646 H. sanguineum", 26570, 120)
+      {
+        Outlier("General",0.05);
+      };
+
+      R_Date("FO-004 Beta-674118 H. sanguineum", 25830, 110)
+      {
+        Outlier("General",0.05);
+      };
+
+      Date("FO Unit-IIIn age");
+      Span("Span FO Unit-IIIn");
+    };
+    Boundary("End FO Unit-IIIn");
+
+    Interval("Gap FO Unit-IIIn -> Unit-II");
+
+
+    // ------------------------------------------------------------
+    // Unit FO II (Mesolithic) — retained for sequence completeness only
+    // ------------------------------------------------------------
+    Boundary("Start FO Unit-II");
+    Phase("FO Unit-II (Mesolithic)")
+    {
+      R_Date("FO-001 OxA-29638 Lynx pardinus", 8781, 40)
+      {
+        Outlier("General",0.05);
+      };
+
+      R_Date("FO-002 R-EVA-1986 Cervus elaphus", 8353, 23)
+      {
+        Outlier("General",0.05);
+      };
+
+      Date("FO Unit-II age");
+      Span("Span FO Unit-II");
+    };
+    Boundary("End FO Unit-II");
+  };
+
+  Sequence("ARB_local_baseline_v1")
+  {
+   Boundary("Start ARB Level-I");
+   Phase("ARB Level-I Mousterian final")
+   {
+    R_Date("OxA-19994", 38350, 400)
+    {
+     Outlier("General", 0.05);
+    };
+    R_Date("OxA-21704", 39200, 1000)
+    {
+     Outlier("General", 0.05);
+    };
+    R_Date("OxA-21662", 37300, 800)
+    {
+     Outlier("General", 0.05);
+    };
+   };
+   Boundary("End ARB Level-I");
+   Interval("Gap I-H");
+   Boundary("Start ARB Level-H");
+   Phase("ARB Level-H Proto-Aurignacian")
+{
+  R_Date("SANU-29017", 34800, 760)
+  {
+    Outlier("General", 0.05);
+  };
+  R_Date("SANU-29019", 35900, 860)
+  {
+    Outlier("General", 0.05);
+  };
+  R_Date("SANU-29016", 35700, 830)
+  {
+    Outlier("General", 0.05);
+  };
+  R_Date("OxA-21674", 33800, 550)
+  {
+    Outlier("General", 0.05);
+  };
+  R_Date("OxA-21665", 35850, 700)
+  {
+    Outlier("General", 0.05);
+  };
+  R_Date("OxA-21784", 36000, 700)
+  {
+    Outlier("General", 0.05);
+  };
+  R_Date("OxA-21664", 35900, 650)
+  {
+    Outlier("General", 0.05);
+  };
+};
+   Boundary("End ARB Level-H");
+   Interval("Gap H-G");
+   Boundary("Start ARB Level-G");
+   Phase("ARB Level-G Evolved Aurignacian")
+   {
+    R_Date("OxA-21666", 32750, 450)
+    {
+     Outlier("General", 0.05);
+    };
+    R_Date("OxA-21667", 32250, 450)
+    {
+     Outlier("General", 0.05);
+    };
+    R_Date("OxA-21783", 32100, 450)
+    {
+     Outlier("General", 0.05);
+    };
+   };
+   Boundary("End ARB Level-G");
+   Interval("Gap G-F");
+   Boundary("Start ARB Level-F");
+   Phase("ARB Level-F Gravettian")
+   {
+    R_Date("OxA-21781", 28260, 280)
+    {
+     Outlier("General", 0.05);
+    };
+    R_Date("OxA-21782", 28280, 290)
+    {
+     Outlier("General", 0.05);
+    };
+   };
+   Boundary("End ARB Level-F");
+   Interval("Gap F-E");
+   Boundary("Start ARB Level-E");
+   Phase("ARB Level-E Gravettian")
+   {
+    R_Date("OxA-21668", 26100, 210)
+    {
+     Outlier("General", 0.05);
+    };
+    R_Date("OxA-21669", 25780, 210)
+    {
+     Outlier("General", 0.05);
+    };
+   };
+   Boundary("End ARB Level-E");
+  };
+  Difference("d_Start_H_minus_End_I", "Start ARB Level-H", "End ARB Level-I");
+  Difference("d_Start_G_minus_End_H", "Start ARB Level-G", "End ARB Level-H");
+  Difference("d_Start_F_minus_End_G", "Start ARB Level-F", "End ARB Level-G");
+  Difference("d_Start_E_minus_End_F", "Start ARB Level-E", "End ARB Level-F");
+
+  Sequence("CGSL_transition_core_S1_without_Beta207578")
+  {
+    Boundary("Start S1B");
+
+    Phase("S1B")
+    {
+      R_Date("Beta-224299", 38640, 440)
+      {
+        Outlier("General", 0.05);
+      };
+    };
+
+    Boundary("End S1B");
+    Interval("Gap S1B-497D");
+    Boundary("Start 497D");
+
+    Phase("497D")
+    {
+      R_Date("AA-68834c", 34179, 247)
+      {
+        Outlier("General", 0.05);
+      };
+    };
+
+    Boundary("End 497D");
+  };
+
+
+    // ============================================================
+    // 1b) CANYARS COMPARATOR
+    // ============================================================
+
+    Sequence("Canyars_local_baseline_v1")
+  {
+   Boundary("Start RC Layer I-Ia");
+   Phase("RC Layer I-Ia (Cala A)")
+   {
+    R_Date("Beta-273965", 33800, 350)
+    {
+     Outlier("General", 0.05);
+    };
+    R_Combine("RC same sample OxA-23643 + OxA-2416-44")
+    {
+     R_Date("OxA-23643", 34540, 330);
+     R_Date("OxA-2416-44", 34980, 350);
+    };
+    R_Combine("RC same sample OxA-23644 + OxA-24057")
+    {
+     R_Date("OxA-23644", 34810, 360);
+     R_Date("OxA-24057", 34900, 340);
+    };
+    First("First RC Layer I-Ia");
+    Last("Last RC Layer I-Ia");
+    Date("Date RC Layer I-Ia");
+   };
+   Boundary("End RC Layer I-Ia");
+  };
+
+    // ============================================================
+    // 2) M3 REGIONAL DIAGNOSTICS
+    // Transition-core baseline:
+    // final MP - Chat - Proto - Generic EUP - Early Aur
+    // No strict regional succession is imposed in this baseline.
+    // ============================================================
+
+    // ---- 2.1 Main order diagnostic
+    Order("M3 order diagnostic (finalMP-Chat-Proto-497D-Aur)")
+    {
+      Date("=End AR Level D");
+      Date("=End AR Level B");
+      Date("=End ARB Level-I");
+      Date("=End S1B");
+      Date("=Start FO Unit-IV.1-IV");
+      Date("=End FO Unit-IV.1-IV");
+      Date("=Start AR Level A");
+      Date("=Start ARB Level-H");
+      Date("=End AR Level A");
+      Date("=End ARB Level-H");
+      Date("=Start 497D");
+      Date("=End 497D");
+      Date("=Start FO Unit-IIIc");
+    };
+
+    // ---- 2.2 Focused component diagnostic
+    Order("M3 component diagnostic")
+    {
+      Date("=End AR Level B");
+      Date("=End ARB Level-I");
+      Date("=End S1B");
+      Date("=Start FO Unit-IV.1-IV");
+      Date("=Start AR Level A");
+      Date("=Start ARB Level-H");
+      Date("=Start 497D");
+      Date("=Start FO Unit-IIIc");
+    };
+
+    // ---- 2.3 Key differences for interpretation
+
+    // final MP vs Chat
+    Difference("d_StartFOChat_minus_EndARD",
+      "Start FO Unit-IV.1-IV", "End AR Level D");
+
+    Difference("d_StartFOChat_minus_EndARB",
+      "Start FO Unit-IV.1-IV", "End AR Level B");
+
+    Difference("d_StartFOChat_minus_EndARBI",
+      "Start FO Unit-IV.1-IV", "End ARB Level-I");
+
+    Difference("d_StartFOChat_minus_EndS1B",
+      "Start FO Unit-IV.1-IV", "End S1B");
+
+    // Chat vs Proto
+    Difference("d_StartARProto_minus_EndFOChat",
+      "Start AR Level A", "End FO Unit-IV.1-IV");
+
+    Difference("d_StartARBProto_minus_EndFOChat",
+      "Start ARB Level-H", "End FO Unit-IV.1-IV");
+
+    Difference("d_StartARProto_minus_StartFOChat",
+      "Start AR Level A", "Start FO Unit-IV.1-IV");
+
+    Difference("d_StartARBProto_minus_StartFOChat",
+      "Start ARB Level-H", "Start FO Unit-IV.1-IV");
+
+    // 497D vs Chat / Proto / Aur
+    Difference("d_Start497D_minus_EndFOChat",
+      "Start 497D", "End FO Unit-IV.1-IV");
+
+    Difference("d_Start497D_minus_StartFOChat",
+      "Start 497D", "Start FO Unit-IV.1-IV");
+
+    Difference("d_Start497D_minus_EndARProto",
+      "Start 497D", "End AR Level A");
+
+    Difference("d_Start497D_minus_EndARBProto",
+      "Start 497D", "End ARB Level-H");
+
+    Difference("d_StartFOAur_minus_End497D",
+      "Start FO Unit-IIIc", "End 497D");
+
+    // Proto vs Early Aur
+    Difference("d_StartFOAur_minus_EndARProto",
+      "Start FO Unit-IIIc", "End AR Level A");
+
+    Difference("d_StartFOAur_minus_EndARBProto",
+      "Start FO Unit-IIIc", "End ARB Level-H");
+
+    // Chat vs Early Aur
+    Difference("d_StartFOAur_minus_EndFOChat",
+      "Start FO Unit-IIIc", "End FO Unit-IV.1-IV");
+
+    // ============================================================
+    // 2.4a CANYARS FOCAL SENSITIVITY
+    // Test only one hypothesis:
+    // End AR Level A < Start RC Layer I-Ia
+    // This evaluates whether Canyars can be reasonably placed
+    // after the Protoaurignacian of AR without imposing any
+    // additional relation to FO Chat or FO IIIc.
+    // ============================================================
+
+    Sequence("M4-CY-S2 Canyars after AR Proto constraint")
+    {
+      Date("=End AR Level A");
+      Date("=Start RC Layer I-Ia");
+    };
+
+    // ---- 2.4 Canyars comparator diagnostic
+    Order("M4-CY-S1 Canyars comparator diagnostic")
+    {
+      Date("=Start RC Layer I-Ia");
+      Date("=End RC Layer I-Ia");
+      Date("=Start FO Unit-IV.1-IV");
+      Date("=End FO Unit-IV.1-IV");
+      Date("=Start AR Level A");
+      Date("=End AR Level A");
+      Date("=Start ARB Level-H");
+      Date("=End ARB Level-H");
+      Date("=Start FO Unit-IIIc");
+    };
+
+    // Canyars vs Chat
+    Difference("d_StartRC_minus_StartFOChat",
+      "Start RC Layer I-Ia", "Start FO Unit-IV.1-IV");
+
+    Difference("d_StartRC_minus_EndFOChat",
+      "Start RC Layer I-Ia", "End FO Unit-IV.1-IV");
+
+    Difference("d_EndRC_minus_StartFOChat",
+      "End RC Layer I-Ia", "Start FO Unit-IV.1-IV");
+
+    // Canyars vs Proto
+    Difference("d_StartRC_minus_EndARProto",
+      "Start RC Layer I-Ia", "End AR Level A");
+
+    Difference("d_StartRC_minus_EndARBProto",
+      "Start RC Layer I-Ia", "End ARB Level-H");
+
+    // Canyars vs Early Aur
+    Difference("d_StartFOAur_minus_EndRC",
+      "Start FO Unit-IIIc", "End RC Layer I-Ia");
+
+  };
+};

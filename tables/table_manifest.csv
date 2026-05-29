@@ -1,0 +1,12 @@
+file,label,title,section,rows,columns
+tables/main/main_table_1_analytical_structure.csv,Table 1,Analytical structure of the dated corpus,main,7,6
+tables/main/main_table_2_regional_model_family.csv,Table 2,Regional Bayesian model family,main,8,4
+tables/main/main_table_3_key_posterior_estimates_and_chronological_contrasts.xlsx,Table 3,Key posterior estimates and chronological contrasts used in Results,main,18,5
+tables/supplementary/supplementary_table_S1_site_level_contribution.csv,Supplementary Table S1,Site-level contribution to the evaluated and regional analytical corpus,supplementary,11,9
+tables/supplementary/supplementary_table_S2_local_chronological_models.csv,Supplementary Table S2,"Local chronological models, source base and regional role",supplementary,11,4
+tables/supplementary/supplementary_table_S3_workflow_reproducibility.csv,Supplementary Table S3,Chronological workflow and reproducibility summary,supplementary,9,3
+tables/supplementary/supplementary_table_S4_corpus_composition.csv,Supplementary Table S4,Composition of the regional corpus and analytical subsets,supplementary,12,7
+tables/supplementary/supplementary_table_S5_diagnostic_support_2ka.csv,Supplementary Table S5,Diagnostic chrono-cultural support by 2-ka interval,supplementary,10,6
+tables/supplementary/supplementary_table_S6_model_family_outputs.csv,Supplementary Table S6,Regional Bayesian model family and canonical outputs,supplementary,9,5
+tables/supplementary/supplementary_table_S7_selected_estimates_difference_tests.csv,Supplementary Table S7,Selected posterior estimates and Difference tests used in Results,supplementary,32,7
+tables/supplementary/supplementary_table_S8_cova_gran_497D_sensitivity.csv,Supplementary Table S8,Cova Gran 497D sensitivity tests,supplementary,12,7

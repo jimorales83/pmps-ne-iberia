@@ -1,0 +1,11 @@
+.Rhistory
+.RData
+.RDataTmp
+.Rproj.user/
+.DS_Store
+Thumbs.db
+Rplots.pdf
+*.log
+*.tmp
+__pycache__/
+

@@ -1,0 +1,18 @@
+﻿Model/output,Boundary or Difference(),68.3% posterior,95.4% posterior,Agreement
+M5-FPM-S2,End Abric Romaní B,42.843-42.560 ka cal BP,43.031-42.417 ka cal BP,C = 99.8
+M5-FPM-S2,End L'Arbreda I,42.424-41.771 ka cal BP,42.574-41.147 ka cal BP,C = 99.2
+M5-FPM-S2,End Cova Gran S1B,42.629-41.239 ka cal BP,42.791-39.923 ka cal BP,C = 99.6
+M5-FPM-S2,Start Abric Romaní A,42.223-41.814 ka cal BP,42.414-41.564 ka cal BP,C = 98.9
+M5-FPM-S2,Start L'Arbreda H,41.609-40.685 ka cal BP,42.089-40.309 ka cal BP,C = 98.9
+M5-FPM-S2,Start Foradada IV.1-IV,41.032-39.460 ka cal BP,44.419-39.293 ka cal BP,C = 90.6
+M5-FPM-S2,Start Cova Gran 497D,40.730-39.249 ka cal BP,42.119-38.949 ka cal BP,C = 99.5
+M5-FPM-S2,Start Abric Romaní A - End Abric Romaní B,+0.436 to +0.941 ka,+0.222 to +1.233 ka,C = 99.8
+M5-FPM-S2,Start Abric Romaní A - End L'Arbreda I,-0.337 to +0.467 ka,-0.955 to +0.759 ka,C = 99.5
+M5-FPM-S2,Start Abric Romaní A - End Cova Gran S1B,-0.836 to +0.661 ka,-2.160 to +0.939 ka,C = 99.6
+M5-FPM-S2,Start Foradada IV.1-IV - End Cova Gran S1B,+0.177 to +2.702 ka,-3.169 to +3.204 ka,C = 99.3
+M5-FPM-S2,Start Cova Gran 497D - End Cova Gran S1B,+0.004 to +1.988 ka,-0.002 to +2.981 ka,C = 99.7
+M4-CP-S1,Start Foradada IV.1-IV under Proto-before-Châtelperronian,40.466-39.514 ka cal BP,41.388-39.367 ka cal BP,C = 97.5
+M4-CP-S2,Start Foradada IV.1-IV under near-contact,44.041-41.470 ka cal BP,48.902-41.133 ka cal BP,C = 88.1
+M4-CP-S1,Start Abric Romaní A - Start Foradada IV.1-IV,-2.536 to -1.442 ka,-2.766 to -0.545 ka,C = 98.2
+M4-CP-S2,Start Abric Romaní A - Start Foradada IV.1-IV,-0.541 to +2.029 ka,-1.117 to +6.957 ka,C = 97.2
+M3,Start Foradada IIIc - End Abric Romaní A,+3.119 to +4.498 ka,+2.361 to +4.916 ka,C = 99.7

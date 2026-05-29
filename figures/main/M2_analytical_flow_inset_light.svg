@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1350" height="520" viewBox="0 0 1350 520" role="img" aria-labelledby="title desc">
+  <title id="title">Light analytical flow inset</title>
+  <desc id="desc">A light node-and-line diagram showing the analytical flow from dated evidence to site assessment, analytical layers, radiocarbon summaries and Bayesian models.</desc>
+  <defs>
+    <marker id="arrow-soft" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M1.5,1.5 L8,5 L1.5,8.5" fill="none" stroke="#5B6470" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      .line { fill: none; stroke: #5B6470; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow-soft); }
+      .node { fill: #FFFFFF; stroke: #2F3A46; stroke-width: 2.2; }
+      .node-out { fill: #F7FAF9; stroke: #315D4F; stroke-width: 2.2; }
+      .dot { fill: #2F3A46; }
+      .dot-out { fill: #315D4F; }
+      .kicker { font-family: "Segoe UI", Arial, Helvetica, sans-serif; font-size: 18px; fill: #64748B; letter-spacing: 0.25px; }
+      .title { font-family: "Segoe UI", Arial, Helvetica, sans-serif; font-size: 28px; font-weight: 650; fill: #111827; }
+      .small { font-family: "Segoe UI", Arial, Helvetica, sans-serif; font-size: 21px; fill: #334155; }
+      .micro { font-family: "Segoe UI", Arial, Helvetica, sans-serif; font-size: 18px; fill: #64748B; }
+    </style>
+  </defs>
+
+  <g opacity="0.98">
+    <path class="line" d="M190 260 C280 260, 305 260, 370 260"/>
+    <path class="line" d="M430 260 C550 260, 570 260, 690 260"/>
+    <path class="line" d="M750 260 C800 260, 820 260, 865 260"/>
+    <path class="line" d="M850 260 C910 260, 930 188, 990 188"/>
+    <path class="line" d="M850 260 C910 260, 930 332, 990 332"/>
+
+    <circle class="node" cx="160" cy="260" r="30"/>
+    <circle class="node" cx="400" cy="260" r="30"/>
+    <circle class="node" cx="720" cy="260" r="30"/>
+    <circle class="node-out" cx="1020" cy="188" r="30"/>
+    <circle class="node-out" cx="1020" cy="332" r="30"/>
+    <circle class="dot" cx="160" cy="260" r="5.5"/>
+    <circle class="dot" cx="400" cy="260" r="5.5"/>
+    <circle class="dot" cx="720" cy="260" r="5.5"/>
+    <circle class="dot-out" cx="1020" cy="188" r="5.5"/>
+    <circle class="dot-out" cx="1020" cy="332" r="5.5"/>
+
+    <text class="kicker" x="160" y="176" text-anchor="middle">corpus</text>
+    <text class="title" x="160" y="214" text-anchor="middle">Dated evidence</text>
+    <text class="small" x="160" y="330" text-anchor="middle">10 sites, n=185</text>
+
+    <text class="kicker" x="400" y="176" text-anchor="middle">evaluation</text>
+    <text class="title" x="400" y="214" text-anchor="middle">Site assessment</text>
+    <text class="small" x="400" y="330" text-anchor="middle">context, association, reliability</text>
+
+    <text class="kicker" x="720" y="176" text-anchor="middle">regional structure</text>
+    <text class="title" x="720" y="214" text-anchor="middle">Analytical layers</text>
+    <text class="small" x="720" y="330" text-anchor="middle">regional corpus n=162</text>
+    <text class="micro" x="720" y="358" text-anchor="middle">14C core, human presence, diagnostic subset</text>
+
+    <text class="kicker" x="1080" y="156">exploratory summaries</text>
+    <text class="title" x="1080" y="194">SPD / CKDE</text>
+    <text class="small" x="1080" y="225">aggregate radiocarbon signal</text>
+
+    <text class="kicker" x="1080" y="300">formal tests</text>
+    <text class="title" x="1080" y="338">Bayesian models</text>
+    <text class="small" x="1080" y="369">order, separation, robustness</text>
+  </g>
+</svg>

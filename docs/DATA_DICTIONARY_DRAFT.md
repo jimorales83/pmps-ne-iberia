@@ -1,0 +1,39 @@
+# Data Dictionary Draft
+
+The final corpus is stored as a semicolon-delimited CSV:
+
+`data/final/pmps_ne_iberia_dated_corpus.csv`
+
+Current fields:
+
+- `site`: site name.
+- `site_code`: short site code.
+- `sector_area`: sector or excavation area.
+- `level_unit`: stratigraphic level or unit.
+- `sublevel_phase`: sublevel or phase, when used.
+- `cultural_attribution`: chrono-cultural attribution.
+- `cultural_attribution_confidence`: confidence assigned to the cultural attribution.
+- `sample_id`: project sample identifier.
+- `lab_code`: laboratory code.
+- `method`: dating method.
+- `pretreatment`: pretreatment protocol.
+- `sample_type`: dated sample type.
+- `taxon_material`: taxon or dated material.
+- `age_result`: reported age.
+- `error_1sigma`: one-sigma error.
+- `age_scale_original`: original reporting scale.
+- `curve`: calibration or reference curve.
+- `reference`: bibliographic source.
+- `year_sample_or_measure`: sample or measurement year, when recorded.
+- `relation_to_human_presence`: relationship between the dated sample and human presence.
+- `context_role`: analytical role of the context.
+- `evaluation_final`: final evaluation category.
+- `same_sample_group`: grouping for repeated dates on the same sample.
+- `bin_id`: bin identifier used for radiocarbon aggregation.
+- `use_14c_primary`: inclusion flag for the primary radiocarbon subset.
+- `use_mixed_all_methods`: inclusion flag for the mixed-method subset.
+- `use_human_presence`: inclusion flag for the human-presence subset.
+- `use_cultural_subset`: inclusion flag for the diagnostic chrono-cultural subset.
+- `selection_note`: short selection or exclusion note.
+
+Internal working-note traceability fields are not included in the public corpus. This dictionary should be checked against the final manuscript terminology before release.

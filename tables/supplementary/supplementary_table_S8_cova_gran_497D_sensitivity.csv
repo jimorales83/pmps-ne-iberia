@@ -1,0 +1,12 @@
+Model/output,Test or relationship,Node or comparison,68.3%,95.4%,Agreement,Comment
+M3,Baseline position,Start 497D,40.667-39.251 ka cal BP,42.036-39.023 ka cal BP,C = 99.4,Open-model start estimate.
+M3,Baseline position,End 497D,39.653-37.877 ka cal BP,39.984-33.360 ka cal BP,C = 94.6,End remains broad.
+M5-FPM-S2,Terminal-MP comparator,d_Start497D_minus_EndARLevelB,+1.952 to +3.492 ka,+0.599 to +3.855 ka,C = 99.7,Later than Abric Romaní B.
+M5-FPM-S2,Terminal-MP comparator,d_Start497D_minus_EndS1B,+0.004 to +1.988 ka,-0.002 to +2.981 ka,C = 99.7,Close to S1B within uncertainty.
+M3-S1,497D after Châtelperronian,d_Start497D_minus_EndFOChat,-0.002 to +0.352 ka,-0.002 to +0.870 ka,C = 99.8,Post-Châtelperronian placement remains close.
+M3-S1,497D after Châtelperronian,d_Start497D_minus_EndARProto,+1.965 to +2.705 ka,+1.558 to +3.274 ka,C = 99.6,Later than Abric Romaní A under this constraint.
+M3-S2,497D before Foradada IIIc,d_StartFOAur_minus_End497D,+0.221 to +1.616 ka,-0.002 to +2.195 ka,C = 99.7,Can precede Foradada IIIc.
+M3-S2,497D before Foradada IIIc,d_Start497D_minus_EndFOChat,-1.764 to +0.093 ka,-3.116 to +0.530 ka,C = 99.5,Relationship with the Foradada Châtelperronian remains open.
+M3-S3,497D synchronous with Châtelperronian,d_Start497D_minus_EndFOChat,-1.620 to -0.004 ka,-2.995 to +0.003 ka,C = 99.3,Overlap or very close contact is accepted.
+M3-S4a,497D after Abric Romaní A,d_Start497D_minus_EndARProto,+1.012 to +2.480 ka,+0.019 to +2.691 ka,C = 99.6,Compatible with a post-Abric Romaní A placement.
+M3-S4a,497D after Abric Romaní A,d_Start497D_minus_EndARBProto,-1.207 to +0.763 ka,-2.486 to +1.410 ka,C = 99.5,Relationship with L'Arbreda H remains open.
