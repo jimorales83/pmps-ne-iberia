@@ -49,16 +49,23 @@ if (length(site_files) == 0) {
 
 oxcal_models <- list.files(root_path("oxcal", "regional_models"), pattern = "\\.oxcal$", full.names = TRUE)
 oxcal_outputs <- list.files(root_path("oxcal", "regional_outputs"), pattern = "\\.csv$", full.names = TRUE)
+local_models <- list.files(root_path("oxcal", "local_models"), pattern = "\\.oxcal$", full.names = TRUE, recursive = TRUE)
+local_outputs <- list.files(root_path("oxcal", "local_outputs"), pattern = "\\.(csv|txt)$", full.names = TRUE, recursive = TRUE)
 if (length(oxcal_models) == 0) {
   errors <- c(errors, "No regional OxCal model files found.")
 }
 if (length(oxcal_outputs) == 0) {
   errors <- c(errors, "No regional OxCal output CSV files found.")
 }
+if (length(local_models) == 0) {
+  errors <- c(errors, "No local OxCal model files found.")
+}
 notes <- c(
   notes,
   paste0("Regional OxCal models: ", length(oxcal_models)),
-  paste0("Regional OxCal outputs: ", length(oxcal_outputs))
+  paste0("Regional OxCal outputs: ", length(oxcal_outputs)),
+  paste0("Local OxCal models: ", length(local_models)),
+  paste0("Local OxCal outputs/posterior exports: ", length(local_outputs))
 )
 
 for (output in oxcal_outputs) {

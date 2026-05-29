@@ -8,8 +8,7 @@ This repository is being prepared as a clean, citable release. It contains the f
 
 - `data/final/`: unified dated corpus used in the paper.
 - `data/site_normalized/`: normalized site-level tables retained for traceability.
-- `oxcal/regional_models/`: regional OxCal model code.
-- `oxcal/regional_outputs/`: selected regional OxCal CSV outputs used for results and tables.
+- `oxcal/`: regional and local OxCal model code, outputs and model inventories.
 - `figures/`: paper-ready main and supplementary figures.
 - `tables/`: paper-ready main and supplementary tables.
 - `R/`: minimal scripts for checking the public repository and reproducing the analytical figures.

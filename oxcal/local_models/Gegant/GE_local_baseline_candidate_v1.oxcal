@@ -1,0 +1,226 @@
+Plot()
+{
+ Curve("Atmospheric","intcal20.14c");
+ Sequence("Cova del Gegant Sequence")
+ {
+  Outlier_Model("General",T(5),U(0,4),"t");
+
+  Boundary("Boundary Bedrock Speleothem bottom");
+  Phase("Bedrock Speleothem")
+  {
+   Date("sample #42a U/Th", N(2014-538000,56000))
+   {
+    Outlier("General", 0.05);
+    color="green";
+   };
+   Date("sample #42b U/Th", N(2014-489000,21250))
+   {
+    Outlier("General", 0.05);
+    color="green";
+   };
+  };
+  Boundary("Boundary Bedrock Speleothem top");
+
+  Boundary("Boundary Layer XXX bottom");
+  Date("sample #38 SG-OSL", N(2017-145039,14003))
+  {
+   Outlier("General", 0.05);
+   color="mediumblue";
+  };
+  Boundary("Boundary Layer XXX top");
+
+  Boundary("Boundary Layer Vg bottom");
+  Date("sample #37 SG-OSL", N(2012-77181,6081))
+  {
+   Outlier("General", 0.05);
+   color="mediumblue";
+  };
+  Boundary("Boundary Layer Vg top");
+
+  Boundary("Boundary Layer Vf bottom");
+  Date("sample #36 IRSL", N(2010-69306,4822))
+  {
+   Outlier("General", 0.05);
+   color="mediumblue";
+  };
+  Boundary("Boundary Layer Vf top");
+
+  Boundary("Boundary Layer Va bottom");
+  Phase("Layer Va")
+  {
+   Date("sample #35 SG-OSL", N(2012-58830,4505))
+   {
+    Outlier("General", 0.05);
+    color="mediumblue";
+   };
+   Date("sample #34 IRSL", N(2010-58426,4063))
+   {
+    Outlier("General", 0.05);
+    color="mediumblue";
+   };
+   Date("sample #33 IRSL", N(2007-55686,4794))
+   {
+    Outlier("General", 0.05);
+    color="mediumblue";
+   };
+  };
+  Boundary("Boundary Layer Va top");
+
+  Boundary("Boundary Layer V Speleothem bottom");
+  Phase("Layer V Speleothem")
+  {
+   Date("sample #44a U/Th", N(2014-56980,135))
+   {
+    Outlier("General", 0.05);
+    color="green";
+   };
+   Date("sample #44b U/Th", N(2014-55800,120))
+   {
+    Outlier("General", 0.05);
+    color="green";
+   };
+   Date("sample #43a U/Th", N(2014-56850,860))
+   {
+    Outlier("General", 0.05);
+    color="green";
+   };
+   Date("sample #43b U/Th", N(2014-57450,750))
+   {
+    Outlier("General", 0.05);
+    color="green";
+   };
+  };
+  Boundary("Boundary Layer V Speleothem top");
+
+  Boundary("Boundary Layer IV bottom");
+  Phase("Layer IV")
+  {
+   Date("sample #32 SG-OSL", N(2012-44440,3095))
+   {
+    Outlier("General", 0.05);
+    color="mediumblue";
+   };
+   R_Date("sample #24 14C", 36060, 390)
+   {
+    Outlier("General", 0.05);
+    color="red";
+   };
+   R_Date("sample #23 14C", 34800, 1000)
+   {
+    Outlier("General", 0.05);
+    color="red";
+   };
+   R_Date("sample #22 14C", 34590, 340)
+   {
+    Outlier("General", 0.05);
+    color="red";
+   };
+  };
+  Boundary("Boundary Layer IV top");
+
+  Boundary("Boundary Layer XXIV bottom");
+  Phase("Layer XXIV")
+  {
+   Date("sample #30 SG-OSL", N(2017-39740,2691))
+   {
+    Outlier("General", 0.05);
+    color="mediumblue";
+   };
+   Date("sample #29 IRSL", N(2010-35991,2482))
+   {
+    Outlier("General", 0.05);
+    color="mediumblue";
+   };
+  };
+  Boundary("Boundary Layer XXIV top");
+
+  Boundary("Boundary Layer III bottom");
+  Phase("Layer III")
+  {
+   Date("sample #28 SG-OSL", N(2017-35315,2446))
+   {
+    Outlier("General", 0.05);
+    color="mediumblue";
+   };
+   R_Date("sample #19 14C", 28530, 240)
+   {
+    Outlier("General", 0.05);
+    color="red";
+   };
+  };
+  Boundary("Boundary Layer III top");
+
+  Boundary("Boundary Layer II bottom");
+  Phase("Layer II")
+  {
+   R_Date("sample #13 14C", 26310, 110)
+   {
+    Outlier("General", 0.05);
+    color="red";
+   };
+   R_Date("sample #12 14C", 26060, 110)
+   {
+    Outlier("General", 0.05);
+    color="red";
+   };
+   R_Date("sample #11 14C", 27190, 190)
+   {
+    Outlier("General", 0.05);
+    color="red";
+   };
+   Date("sample #27 SG-OSL", N(2012-32426,1949))
+   {
+    Outlier("General", 0.05);
+    color="mediumblue";
+   };
+  };
+  Date("sample #26 SG-OSL", N(2017-21966,1460))
+  {
+   Outlier("General", 0.05);
+   color="mediumblue";
+  };
+  Boundary("Boundary Layer II top");
+
+  Boundary("Boundary Layer XXV bottom");
+  Phase("Layer XXV")
+  {
+   R_Date("sample #10 14C", 3225, 27)
+   {
+    Outlier("General", 0.05);
+    color="red";
+   };
+   R_Date("sample #9 14C", 3270, 30)
+   {
+    Outlier("General", 0.05);
+    color="red";
+   };
+   R_Date("sample #8 14C", 3310, 35)
+   {
+    Outlier("General", 0.05);
+    color="red";
+   };
+   R_Date("sample #4 14C", 3200, 30)
+   {
+    Outlier("General", 0.05);
+    color="red";
+   };
+  };
+  Boundary("Boundary Layer XXV top");
+
+  Boundary("Boundary Layer I bottom");
+  R_Date("sample #3 14C", 1818, 19)
+  {
+   Outlier("General", 0.05);
+   color="red";
+  };
+  Boundary("Boundary Layer I top");
+
+  Before()
+  {
+   Date("Cova del Gegant top age", AD(1950))
+   {
+    color="mediumblue";
+   };
+  };
+ };
+};

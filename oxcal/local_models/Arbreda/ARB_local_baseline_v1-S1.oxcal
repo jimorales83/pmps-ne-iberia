@@ -1,0 +1,109 @@
+ Plot()
+ {
+  Curve("Atmospheric","intcal20.14c");
+  Outlier_Model("General", T(5), U(0,4), "t");
+  Sequence("ARB_local_baseline_v1")
+  {
+   Boundary("Start ARB Level-I");
+   Phase("ARB Level-I Mousterian final")
+   {
+    R_Date("OxA-19994", 38350, 400)
+    {
+     Outlier("General", 0.05);
+    };
+    R_Date("OxA-21704", 39200, 1000)
+    {
+     Outlier("General", 0.05);
+    };
+    R_Date("OxA-21662", 37300, 800)
+    {
+     Outlier("General", 0.05);
+    };
+   };
+   Boundary("End ARB Level-I");
+   Interval("Gap I-H");
+   Boundary("Start ARB Level-H");
+   Phase("ARB Level-H Proto-Aurignacian")
+{
+  R_Date("SANU-29017", 34800, 760)
+  {
+    Outlier("General", 0.05);
+  };
+  R_Date("SANU-29019", 35900, 860)
+  {
+    Outlier("General", 0.05);
+  };
+  R_Date("SANU-29016", 35700, 830)
+  {
+    Outlier("General", 0.05);
+  };
+  //R_Date("OxA-21674", 33800, 550)
+  {
+    Outlier("General", 0.05);
+  };
+  R_Date("OxA-21665", 35850, 700)
+  {
+    Outlier("General", 0.05);
+  };
+  R_Date("OxA-21784", 36000, 700)
+  {
+    Outlier("General", 0.05);
+  };
+  R_Date("OxA-21664", 35900, 650)
+  {
+    Outlier("General", 0.05);
+  };
+};
+   Boundary("End ARB Level-H");
+   Interval("Gap H-G");
+   Boundary("Start ARB Level-G");
+   Phase("ARB Level-G Evolved Aurignacian")
+   {
+    R_Date("OxA-21666", 32750, 450)
+    {
+     Outlier("General", 0.05);
+    };
+    R_Date("OxA-21667", 32250, 450)
+    {
+     Outlier("General", 0.05);
+    };
+    R_Date("OxA-21783", 32100, 450)
+    {
+     Outlier("General", 0.05);
+    };
+   };
+   Boundary("End ARB Level-G");
+   Interval("Gap G-F");
+   Boundary("Start ARB Level-F");
+   Phase("ARB Level-F Gravettian")
+   {
+    R_Date("OxA-21781", 28260, 280)
+    {
+     Outlier("General", 0.05);
+    };
+    R_Date("OxA-21782", 28280, 290)
+    {
+     Outlier("General", 0.05);
+    };
+   };
+   Boundary("End ARB Level-F");
+   Interval("Gap F-E");
+   Boundary("Start ARB Level-E");
+   Phase("ARB Level-E Gravettian")
+   {
+    R_Date("OxA-21668", 26100, 210)
+    {
+     Outlier("General", 0.05);
+    };
+    R_Date("OxA-21669", 25780, 210)
+    {
+     Outlier("General", 0.05);
+    };
+   };
+   Boundary("End ARB Level-E");
+  };
+  Difference("d_Start_H_minus_End_I", "Start ARB Level-H", "End ARB Level-I");
+  Difference("d_Start_G_minus_End_H", "Start ARB Level-G", "End ARB Level-H");
+  Difference("d_Start_F_minus_End_G", "Start ARB Level-F", "End ARB Level-G");
+  Difference("d_Start_E_minus_End_F", "Start ARB Level-E", "End ARB Level-F");
+ };

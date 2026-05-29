@@ -1,0 +1,132 @@
+Plot()
+{
+  // ------------------------------------------------------------
+  // GR_local_baseline_consolidado
+  // La Griera: consolidated local baseline
+  // Frozen canonical version of the corrected GR_local_baseline_v1.
+  // This is the baseline local model adopted for the project after
+  // successful execution and review of the run.
+  // ------------------------------------------------------------
+
+  Curve("Atmospheric","intcal20.14c");
+  Outlier_Model("General", T(5), U(0,4), "t");
+
+  Sequence("GR_local_baseline_consolidado")
+  {
+    // ----------------------------------------------------------
+    // Deep MP sequence: Unit-V -> Unit-IV.3 -> Unit-III.3
+    // ----------------------------------------------------------
+
+    Boundary("Start GR Unit-V");
+    Phase("GR Unit-V")
+    {
+      Date("GR17-04 OSL", N(2017-148120,9170))
+      {
+        Outlier("General",0.05);
+      };
+    };
+    Boundary("End GR Unit-V");
+
+    Boundary("Start GR Unit-IV.3");
+    Phase("GR Unit-IV.3")
+    {
+      Date("GR17-03 OSL", N(2017-105490,8390))
+      {
+        Outlier("General",0.05);
+      };
+    };
+    Boundary("End GR Unit-IV.3");
+
+    // Undated sedimentary package between Unit-IV.3 and Unit-III.3
+    Interval("Elapsed time GR Unit-IV.3 -> GR Unit-III.3 (undated Unit-IV.1-IV.2)");
+
+    Boundary("Start GR Unit-III.3");
+    Phase("GR Unit-III.3")
+    {
+      Date("GR17-02 OSL", N(2017-83220,4730))
+      {
+        Outlier("General",0.05);
+      };
+    };
+    Boundary("End GR Unit-III.3");
+
+    // ----------------------------------------------------------
+    // Ordered OSL pair for Unit-III.1-III.2
+    // ----------------------------------------------------------
+
+    Boundary("Start GR Unit-III.1-III.2");
+    Sequence("GR Unit-III.1-III.2")
+    {
+      Date("GR17-01 OSL (base)", N(2017-69490,3990))
+      {
+        Outlier("General",0.05);
+      };
+
+      Date("GR22-02 OSL (top)", N(2022-66000,4000))
+      {
+        Outlier("General",0.05);
+      };
+    };
+    Boundary("End GR Unit-III.1-III.2");
+
+    // Temporal discontinuity between Unit-III and the base of Unit-II
+    Interval("Hiatus GR Unit-III.1-III.2 -> GR Unit-II base");
+
+    // Base of lithostratigraphic Unit-II; OSL below archaeological Level-IIb
+    Date("GR22-01 OSL (base Unit-II; below Level-IIb)", N(2022-52000,4000))
+    {
+      Outlier("General",0.05);
+    };
+
+    // Sterile or near-sterile basal sediment before the first archaeological horizon of Unit-II
+    Interval("Elapsed time GR Unit-II base -> Start GR Level-IIb (sterile basal sediment)");
+
+    // ----------------------------------------------------------
+    // Upper transition: Level-IIb -> Level-IIa -> Level-II
+    // ----------------------------------------------------------
+
+    Boundary("Start GR Level-IIb");
+    Phase("GR Level-IIb")
+    {
+      // No direct dates currently available; duration queried between Start and End boundaries
+      Interval("Duration GR Level-IIb (prior-driven)");
+    };
+    Boundary("End GR Level-IIb");
+
+    // Sterile layer between the last MP horizon and the first clear UP horizon
+    Interval("Hiatus GR Level-IIb -> GR Level-IIa (sterile layer)");
+
+    Boundary("Start GR Level-IIa");
+    Phase("GR Level-IIa (Late Aurignacian)")
+    {
+      R_Date("R-EVA-2043", 31310, 160)
+      {
+        Outlier("General",0.05);
+      };
+
+      R_Date("OxA-34305", 30860, 260)
+      {
+        Outlier("General",0.05);
+      };
+
+      R_Date("R-EVA-2037", 28670, 130)
+      {
+        Outlier("General",0.05);
+      };
+
+      Span("Span GR Level-IIa");
+      Interval("Duration GR Level-IIa (dated activity)");
+    };
+    Boundary("End GR Level-IIa");
+
+    Boundary("Start GR Level-II (UP indet)");
+    Phase("GR Level-II (UP indet)")
+    {
+      R_Date("Beta-493572", 22350, 90)
+      {
+        Outlier("General",0.05);
+      };
+    };
+    Boundary("End GR Level-II (UP indet)");
+  };
+};

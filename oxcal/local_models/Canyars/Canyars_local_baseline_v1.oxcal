@@ -1,0 +1,30 @@
+ Plot()
+ {
+  Curve("Atmospheric","intcal20.14c");
+  Outlier_Model("General", T(5), U(0,4), "t");
+  Sequence("Canyars_local_baseline_v1")
+  {
+   Boundary("Start RC Layer I-Ia");
+   Phase("RC Layer I-Ia (Cala A)")
+   {
+    R_Date("Beta-273965", 33800, 350)
+    {
+     Outlier("General", 0.05);
+    };
+    R_Combine("RC same sample OxA-23643 + OxA-2416-44")
+    {
+     R_Date("OxA-23643", 34540, 330);
+     R_Date("OxA-2416-44", 34980, 350);
+    };
+    R_Combine("RC same sample OxA-23644 + OxA-24057")
+    {
+     R_Date("OxA-23644", 34810, 360);
+     R_Date("OxA-24057", 34900, 340);
+    };
+    First("First RC Layer I-Ia");
+    Last("Last RC Layer I-Ia");
+    Date("Date RC Layer I-Ia");
+   };
+   Boundary("End RC Layer I-Ia");
+  };
+ };

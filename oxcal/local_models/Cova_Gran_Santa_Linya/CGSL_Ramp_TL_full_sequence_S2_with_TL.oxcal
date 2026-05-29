@@ -1,0 +1,64 @@
+Plot()
+{
+  Curve("Atmospheric","intcal20.14c");
+  Outlier_Model("General", T(5), U(0,4), "t");
+
+  Sequence("CGSL_Ramp_TL_full_sequence_S2_with_TL")
+  {
+    Boundary("Start S1D");
+    Phase("S1D")
+    {
+      Date("MAD-5574BIN", N(1950-41308, 3979))
+      {
+        Outlier("General", 0.05);
+      };
+    };
+
+    Boundary("End S1D / Start S1C");
+    Phase("S1C")
+    {
+      Date("MAD-5575BIN", N(1950-40288, 3389))
+      {
+        Outlier("General", 0.05);
+      };
+    };
+
+    Boundary("End S1C / Start S1B");
+    Phase("S1B")
+    {
+      Date("MAD-5580BIN", N(1950-35820, 2237))
+      {
+        Outlier("General", 0.05);
+      };
+    };
+
+    Boundary("End S1B / Start 497D");
+    Phase("497D")
+    {
+      Date("MAD-5502BIN", N(1950-36610, 4056))
+      {
+        Outlier("General", 0.05);
+      };
+    };
+
+    Boundary("End 497D / Start 497C");
+    Phase("497C")
+    {
+      Date("MAD-5570BIN", N(1950-22922, 1777))
+      {
+        Outlier("General", 0.05);
+      };
+    };
+
+    Boundary("End 497C / Start 497A");
+    Phase("497A")
+    {
+      Date("MAD-5569BIN", N(1950-20555, 1940))
+      {
+        Outlier("General", 0.05);
+      };
+    };
+
+    Boundary("End 497A");
+  };
+};

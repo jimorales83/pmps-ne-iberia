@@ -1,0 +1,100 @@
+Plot()
+{
+  Curve("Atmospheric","intcal20.14c");
+  Outlier_Model("General", T(5), U(0,4), "t");
+
+  Sequence("FM_baseline_v1_interior")
+  {
+    Boundary("Start FM interior");
+
+    Boundary("Start CDS_inf basal pulse");
+    Phase("CDS_inf basal pulse")
+    {
+      R_Date("Beta-572489_GPA_Sector5_nivell2_CDS_inf1", 33030, 180)
+      {
+        Outlier("General", 0.05);
+      };
+
+      R_Date("Beta-596599_GPE_Base_Laminacions_CDS_inf2", 31390, 150)
+      {
+        Outlier("General", 0.05);
+      };
+    };
+    Boundary("End CDS_inf basal pulse");
+
+    Boundary("Start CDS_inf upper pulse");
+    Phase("CDS_inf upper pulse")
+    {
+      R_Date("Beta-652876_GPE_Sondeig2_top_CDS_inf3", 21750, 80)
+      {
+        Outlier("General", 0.05);
+      };
+
+      R_Date("Beta-652877_GPE_Rasa_linia_inferior_CDS_inf3", 21850, 70)
+      {
+        Outlier("General", 0.05);
+      };
+    };
+    Boundary("End CDS_inf upper pulse");
+
+    Boundary("Start CDS_sup Iron Age pulse");
+    Phase("CDS_sup Iron Age pulse")
+    {
+      R_Date("Beta-631275_GPE_Rasa_linia_superior_CDS_sup4", 2290, 30)
+      {
+        Outlier("General", 0.05);
+      };
+
+      R_Date("Beta-631276_GPE_Boca_Pou_Palletes_CDS_sup4", 2390, 30)
+      {
+        Outlier("General", 0.05);
+      };
+
+      R_Date("Beta-631279_GPA_Sector5_nivell1_CDS_sup4", 2180, 30)
+      {
+        Outlier("General", 0.05);
+      };
+
+      R_Date("Beta-596597_Sala_del_Llac_UE11_CDS_sup4", 2160, 30)
+      {
+        Outlier("General", 0.05);
+      };
+
+      R_Date("Beta-596598_Sala_del_Llac_UE12_CDS_sup4", 2340, 30)
+      {
+        Outlier("General", 0.05);
+      };
+
+      R_Date("Beta-596596_Sala_del_Llac_UE13_CDS_sup4", 2460, 30)
+      {
+        Outlier("General", 0.05);
+      };
+    };
+    Boundary("End CDS_sup Iron Age pulse");
+
+    Boundary("End FM interior");
+  };
+
+  Sequence("FM_baseline_v1_CE")
+  {
+    Boundary("Start CE-1");
+    Phase("CE-1 Neolithic exterior")
+    {
+      R_Date("Beta-652873_CE1", 6270, 30)
+      {
+        Outlier("General", 0.05);
+      };
+
+      R_Date("Beta-317705_CE1", 6310, 40)
+      {
+        Outlier("General", 0.05);
+      };
+
+      R_Date("Beta-652874_CE1", 6400, 30)
+      {
+        Outlier("General", 0.05);
+      };
+    };
+    Boundary("End CE-1");
+  };
+};

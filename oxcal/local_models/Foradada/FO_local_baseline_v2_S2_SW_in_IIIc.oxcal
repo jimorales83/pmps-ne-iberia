@@ -1,0 +1,129 @@
+Plot()
+{
+  // FO_local_baseline_v2_S3_SW_in_IIIc
+  // Cova Foradada — sensibilidad 3 sobre baseline_v2
+  // Único cambio respecto a baseline_v2:
+  // - se reintroducen las dos dataciones de SW Gallery
+  //   (FO-012 y FO-013), pero adscritas a IIIc
+  //   en lugar de IV-IV.1.
+  // - el objetivo es contrastar la adscripción inicial IIIc/IV
+  //   frente a la adscripción posterior a IV-IV.1,
+  //   manteniendo idéntica la arquitectura del baseline core.
+
+  Curve("Atmospheric","intcal20.14c");
+  Outlier_Model("General", T(5), U(0,4), "t");
+
+  Sequence("FO_local_baseline_v2_S3_SW_in_IIIc")
+  {
+    // ------------------------------------------------------------
+    // Unit FO IV.1-IV (Chatelperronian) — baseline core unchanged
+    // ------------------------------------------------------------
+    Boundary("Start FO Unit-IV.1-IV");
+    Phase("FO Unit-IV.1-IV (Chatelperronian)")
+    {
+      R_Combine("FO-009 subsample combine")
+      {
+        R_Date("FO-009 OxA-X-2649-9 AOx-SC", 34490, 320);
+        R_Date("FO-009 Beta-435465 AAA", 34570, 240);
+      };
+
+      R_Date("FO-010 OxA-X-2650-9 AOx-SC", 34300, 1000)
+      {
+        Outlier("General",0.35);
+      };
+
+      Date("FO Unit-IV.1-IV age");
+      Span("Span FO Unit-IV.1-IV");
+    };
+    Boundary("End FO Unit-IV.1-IV");
+
+    Interval("Gap FO Unit-IV.1-IV -> Unit-IIIc");
+
+    // ------------------------------------------------------------
+    // Unit FO IIIc (Early Aurignacian) — SW dates added here
+    // ------------------------------------------------------------
+    Boundary("Start FO Unit-IIIc");
+    Phase("FO Unit-IIIc (Early Aurignacian)")
+    {
+      R_Date("FO-013 OxA-34232 SW Gallery ABOx-SC", 32910, 550)
+      {
+        Outlier("General",0.20);
+      };
+
+      R_Date("FO-012 OxA-34250 SW Gallery ABOx-SC", 32990, 560)
+      {
+        Outlier("General",0.20);
+      };
+
+      R_Date("FO-005 Beta-378800 AAA", 30220, 180)
+      {
+        Outlier("General",0.05);
+      };
+
+      R_Date("FO-006 OxA-34233 ABOx-SC", 33170, 370)
+      {
+        Outlier("General",0.05);
+      };
+
+      R_Date("FO-007 OxA-34251 ABOx-SC", 32050, 550)
+      {
+        Outlier("General",0.05);
+      };
+
+      Date("FO Unit-IIIc age");
+      Span("Span FO Unit-IIIc");
+    };
+    Boundary("End FO Unit-IIIc");
+
+    Interval("Gap FO Unit-IIIc -> Unit-IIIn");
+
+    // ------------------------------------------------------------
+    // Unit FO IIIn (Initial Gravettian) — marine shell dates
+    // ------------------------------------------------------------
+    Boundary("Start FO Unit-IIIn");
+    Phase("FO Unit-IIIn (Initial Gravettian)")
+    {
+      Curve("Marine20 FO IIIn","marine20.14c");
+      Delta_R("FO IIIn Delta_R", -42, 30);
+
+      R_Date("FO-003 OxA-24646 H. sanguineum", 26570, 120)
+      {
+        Outlier("General",0.05);
+      };
+
+      R_Date("FO-004 Beta-674118 H. sanguineum", 25830, 110)
+      {
+        Outlier("General",0.05);
+      };
+
+      Date("FO Unit-IIIn age");
+      Span("Span FO Unit-IIIn");
+    };
+    Boundary("End FO Unit-IIIn");
+
+    Interval("Gap FO Unit-IIIn -> Unit-II");
+
+    Curve("Atmospheric reset after IIIn","intcal20.14c");
+
+    // ------------------------------------------------------------
+    // Unit FO II (Mesolithic) — retained for sequence completeness only
+    // ------------------------------------------------------------
+    Boundary("Start FO Unit-II");
+    Phase("FO Unit-II (Mesolithic)")
+    {
+      R_Date("FO-001 OxA-29638 Lynx pardinus", 8781, 40)
+      {
+        Outlier("General",0.05);
+      };
+
+      R_Date("FO-002 R-EVA-1986 Cervus elaphus", 8353, 23)
+      {
+        Outlier("General",0.05);
+      };
+
+      Date("FO Unit-II age");
+      Span("Span FO Unit-II");
+    };
+    Boundary("End FO Unit-II");
+  };
+};

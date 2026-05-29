@@ -1,0 +1,44 @@
+Plot()
+{
+  Curve("Atmospheric","intcal20.14c");
+  Outlier_Model("General", T(5), U(0,4), "t");
+
+  Sequence("Teixoneres_local_baseline_v1")
+  {
+    Boundary("Start Teixoneres Chamber X model");
+
+    Phase("Teixoneres Unit III")
+    {
+      // Anthropogenic
+      R_Date("MAMS-18671", 47200, 670) { Outlier("General",0.05); };
+      R_Date("MAMS-18672", 42020, 370) { Outlier("General",0.05); };
+      R_Date("MAMS-18673", 40610, 340) { Outlier("General",0.05); };
+
+      // Unmodified
+      R_Date("MAMS-17609", 42250, 359) { Outlier("General",0.05); };
+      R_Date("MAMS-17603", 41270, 327) { Outlier("General",0.05); };
+      R_Date("MAMS-17604", 41560, 337) { Outlier("General",0.05); };
+
+      // Excluded in baseline:
+      // MAMS-17605 >51000 BP  -> lower-limit age, not modelled as standard R_Date
+    };
+
+    Boundary("Transition Teixoneres Unit III/II");
+
+    Phase("Teixoneres Unit II")
+    {
+      // Anthropogenic
+      R_Date("MAMS-17600", 36850, 211) { Outlier("General",0.05); };
+      R_Date("MAMS-18668", 39000, 260) { Outlier("General",0.05); };
+      R_Date("MAMS-18669", 40800, 320) { Outlier("General",0.05); };
+      R_Date("MAMS-18670", 30780, 110) { Outlier("General",0.05); };
+
+      // Unmodified
+      R_Date("MAMS-17607", 34940, 173) { Outlier("General",0.05); };
+      R_Date("MAMS-17601", 39320, 263) { Outlier("General",0.05); };
+      R_Date("MAMS-17608", 34900, 175) { Outlier("General",0.05); };
+    };
+
+    Boundary("End Teixoneres Unit II");
+  };
+};

@@ -22,8 +22,10 @@ The final corpus is copied from the working repository's unified derived dataset
 
 - `oxcal/regional_models/*.oxcal`
 - `oxcal/regional_outputs/*.csv`
+- `oxcal/local_models/*/*.oxcal`
+- `oxcal/local_outputs/**/*`
 
-The current draft includes regional model code and selected CSV outputs used in the paper. Local OxCal models are not yet copied because the public set should distinguish consolidated models from exploratory or sensitivity variants.
+The current draft includes regional model code, selected regional CSV outputs, and the site-level local models and outputs retained for traceability. Bibliographic reference PDFs from the private working repository are excluded.
 
 ### Figures and Tables
 
@@ -38,13 +40,10 @@ These are copied from the paper-ready `figures_tables` area of the working repos
 ## Pending Decisions
 
 1. Decide whether to include source site spreadsheets or only the final unified and normalized datasets.
-2. Select local OxCal models for public release.
-3. Decide whether selected local OxCal outputs should be included alongside regional outputs.
-4. Replace exploratory R scripts with a small set of clean reproduction scripts.
-5. Finalize the data dictionary against the submitted manuscript terminology.
-6. Add `CITATION.cff` when title, author list and DOI status are final.
-7. Add a license after deciding the preferred reuse terms for data, code and figures.
-8. Add the final Supplementary Online Material when the document is stable.
+2. Finalize the data dictionary against the submitted manuscript terminology.
+3. Add `CITATION.cff` when title, author list and DOI status are final.
+4. Add a license after deciding the preferred reuse terms for data, code and figures.
+5. Add the final Supplementary Online Material when the document is stable.
 
 ## Excluded from Public Release
 
@@ -54,4 +53,4 @@ These are copied from the paper-ready `figures_tables` area of the working repos
 - Quarto generated folders, `_site`, `_freeze`, and exploratory rendered files.
 - R session files such as `.RData` and `.Rhistory`.
 - Internal audit notes and development-only logs.
-- Exploratory model variants unless explicitly cited or needed for sensitivity reporting.
+- Bibliographic PDFs stored beside local OxCal workspaces.

@@ -1,0 +1,37 @@
+Plot()
+{
+  Curve("Atmospheric","intcal20.14c");
+  Outlier_Model("General", T(5), U(0,4), "t");
+
+  Sequence("CGSL_transition_core_baseline_v1")
+  {
+    Boundary("Start S1B");
+
+    Phase("S1B")
+    {
+      R_Date("Beta-224299", 38640, 440)
+      {
+        Outlier("General", 0.05);
+      };
+    };
+
+    Boundary("End S1B");
+    Interval("Gap S1B-497D");
+    Boundary("Start 497D");
+
+    Phase("497D")
+    {
+      R_Date("AA-68834c", 34179, 247)
+      {
+        Outlier("General", 0.05);
+      };
+
+      R_Date("Beta-207578", 32630, 450)
+      {
+        Outlier("General", 0.15);
+      };
+    };
+
+    Boundary("End 497D");
+  };
+};
