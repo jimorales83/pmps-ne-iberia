@@ -14,6 +14,8 @@ This repository is being prepared as a clean, citable release. It contains the f
 - `R/`: minimal scripts for checking the public repository and reproducing the analytical figures.
 - `docs/`: public documentation and release notes.
 
+For the simplest reproduction workflow, open `R/run_reproduction.R` in RStudio and click **Source**. It writes all check outputs to `reproduction_outputs/` without overwriting the paper-ready figures.
+
 ## Current Status
 
 Draft public repository skeleton. The final release should be archived in Zenodo and cited through the Zenodo DOI. The GitHub repository should remain the navigable version of the same release.

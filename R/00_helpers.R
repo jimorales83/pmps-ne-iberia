@@ -6,10 +6,18 @@ script_path <- function() {
   args <- commandArgs(trailingOnly = FALSE)
   file_arg <- "--file="
   hit <- grep(file_arg, args, fixed = TRUE, value = TRUE)
-  if (length(hit) == 0) {
-    return(normalizePath(getwd(), winslash = "/", mustWork = TRUE))
+  if (length(hit) > 0) {
+    return(normalizePath(sub(file_arg, "", hit[[1]]), winslash = "/", mustWork = TRUE))
   }
-  normalizePath(sub(file_arg, "", hit[[1]]), winslash = "/", mustWork = TRUE)
+
+  if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
+    active_path <- rstudioapi::getActiveDocumentContext()$path
+    if (!is.null(active_path) && nzchar(active_path)) {
+      return(normalizePath(active_path, winslash = "/", mustWork = TRUE))
+    }
+  }
+
+  normalizePath(getwd(), winslash = "/", mustWork = TRUE)
 }
 
 repo_root <- function() {
@@ -25,6 +33,14 @@ root_path <- function(...) {
 }
 
 figure_path <- function(section) {
+  output_dir <- Sys.getenv("PMPS_OUTPUT_DIR", "")
+  if (nzchar(output_dir)) {
+    if (!grepl("^[A-Za-z]:[/\\\\]|^/", output_dir)) {
+      output_dir <- root_path(output_dir)
+    }
+    return(file.path(normalizePath(output_dir, winslash = "/", mustWork = FALSE), "figures", section))
+  }
+
   variant <- Sys.getenv("PMPS_OUTPUT_VARIANT", "")
   if (nzchar(variant)) {
     return(root_path("figures", variant, section))

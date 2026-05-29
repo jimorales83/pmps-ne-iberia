@@ -1,11 +1,27 @@
 # Lightweight integrity checks for the public paper repository.
 
-this_script <- normalizePath(
-  sub("--file=", "", grep("--file=", commandArgs(trailingOnly = FALSE), value = TRUE)[1]),
-  winslash = "/",
-  mustWork = TRUE
-)
-source(file.path(dirname(this_script), "00_helpers.R"), encoding = "UTF-8")
+find_script_dir <- function() {
+  args <- commandArgs(trailingOnly = FALSE)
+  hit <- grep("--file=", args, fixed = TRUE, value = TRUE)
+  if (length(hit) > 0) {
+    return(dirname(normalizePath(sub("--file=", "", hit[[1]]), winslash = "/", mustWork = TRUE)))
+  }
+  if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
+    active_path <- rstudioapi::getActiveDocumentContext()$path
+    if (!is.null(active_path) && nzchar(active_path)) {
+      return(dirname(normalizePath(active_path, winslash = "/", mustWork = TRUE)))
+    }
+  }
+  if (file.exists("R/00_helpers.R")) {
+    return(normalizePath("R", winslash = "/", mustWork = TRUE))
+  }
+  if (file.exists("00_helpers.R")) {
+    return(normalizePath(".", winslash = "/", mustWork = TRUE))
+  }
+  stop("Cannot find R/00_helpers.R. Open the public repository folder in RStudio or run R/run_reproduction.R.")
+}
+
+source(file.path(find_script_dir(), "00_helpers.R"), encoding = "UTF-8")
 
 require_packages(c("dplyr", "readr"))
 
