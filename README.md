@@ -12,11 +12,12 @@ This repository is being prepared as a clean, citable release. It contains the f
 - `oxcal/regional_outputs/`: selected regional OxCal CSV outputs used for results and tables.
 - `figures/`: paper-ready main and supplementary figures.
 - `tables/`: paper-ready main and supplementary tables.
+- `R/`: minimal scripts for checking the public repository and reproducing the analytical figures.
 - `docs/`: public documentation and release notes.
 
 ## Current Status
 
-Draft public repository skeleton. Clean R reproduction scripts will be added before release. The final release should be archived in Zenodo and cited through the Zenodo DOI. The GitHub repository should remain the navigable version of the same release.
+Draft public repository skeleton. The final release should be archived in Zenodo and cited through the Zenodo DOI. The GitHub repository should remain the navigable version of the same release.
 
 ## Reproducibility Scope
 

@@ -8,4 +8,4 @@ Rplots.pdf
 *.log
 *.tmp
 __pycache__/
-
+figures/_test/
