@@ -6,7 +6,6 @@
 "Abric_Romani","local_model","sensitivity","oxcal/local_models/Abric_Romani/AR_full_sequence_structural_v1-1_S1_shellMarine20.oxcal","oxcal/local_outputs/Abric_Romani/AR_full_sequence_structural_v1-1_S1_shellMarine20.csv"
 "Abric_Romani","local_model","sensitivity","oxcal/local_models/Abric_Romani/AR_full_sequence_structural_v1-1_S2_shellA_Marine20_only.oxcal","oxcal/local_outputs/Abric_Romani/AR_full_sequence_structural_v1-1_S2_shellA_Marine20_only.csv"
 "Abric_Romani","local_model","sensitivity","oxcal/local_models/Abric_Romani/AR_full_sequence_structural_v1-1-S3_shellA_Marine20_outlier20.oxcal","oxcal/local_outputs/Abric_Romani/AR_full_sequence_structural_v1-1_S3_shellA_Marine20_outlier20.csv"
-"Arbreda","local_model","working_copy","oxcal/local_models/Arbreda/ARB_local_baseline_v1 - copia.oxcal",""
 "Arbreda","local_model","baseline","oxcal/local_models/Arbreda/ARB_local_baseline_v1.oxcal","oxcal/local_outputs/Arbreda/ARB_local_baseline_v1.csv"
 "Arbreda","local_model","sensitivity","oxcal/local_models/Arbreda/ARB_local_baseline_v1_S2a.oxcal","oxcal/local_outputs/Arbreda/ARB_local_baseline_v1_S2a.csv"
 "Arbreda","local_model","sensitivity","oxcal/local_models/Arbreda/ARB_local_baseline_v1_S2b.oxcal","oxcal/local_outputs/Arbreda/ARB_local_baseline_v1_S2b.csv"
