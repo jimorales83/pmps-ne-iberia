@@ -13,6 +13,7 @@ This is the release-candidate public repository. It contains the dated corpus us
 - `tables/`: paper-ready main and supplementary tables, including figure-source tables where a figure is built from curated intermediate data.
 - `R/`: minimal scripts for checking the repository and reproducing Figures 3-7 and the supplementary analytical figures.
 - `docs/`: data dictionary.
+- `LICENSE.md`: licensing scope and third-party material notes.
 
 The semicolon-delimited CSV in `data/final/` is the canonical machine-readable dataset. The XLSX copy and the ten files in `data/site_normalized/` contain the same records.
 
@@ -26,9 +27,11 @@ The default run uses the paper settings for the main figures and the key CKDE/SP
 
 The repository supports audit and reproduction from the harmonised publication dataset onward. It does not reproduce the original transcription of published measurements or the full private research workflow.
 
-The OxCal model code and exported outputs are preserved for audit. The R workflow redraws the analytical figures from the final corpus, the OxCal CSV exports and the documented figure-source tables; it does not run OxCal itself. Figure 1 is a GIS composition and Figure 2 is a conceptual workflow diagram.
+The OxCal model code and exported outputs are preserved for audit. The R workflow redraws the analytical figures from the final corpus, the OxCal CSV exports and the documented figure-source tables; it does not run OxCal itself. Figure 1 is a GIS composition, Figure 2 is a conceptual workflow diagram and Figure 8 is an author-prepared archaeological composition.
 
-Figure 8 contains material adapted from third-party publications and is not redistributed here pending confirmation of reuse rights.
+## Licensing
+
+Code in `R/` and OxCal model scripts is released under the MIT License. Data, documentation, tables and original or lawfully adapted visual materials are released under CC BY 4.0, subject to the source-specific notices in `LICENSE.md` and `figures/README.md`.
 
 ## Citation and release
 

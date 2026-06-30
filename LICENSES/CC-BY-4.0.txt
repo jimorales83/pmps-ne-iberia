@@ -1,0 +1,21 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Juan Ignacio Morales and María Soto Quesada
+
+The research materials identified in LICENSE.md are licensed under the
+Creative Commons Attribution 4.0 International licence.
+
+You may share and adapt the material for any purpose, including commercially,
+provided that you give appropriate credit, provide a link to the licence and
+indicate whether changes were made. You may not apply legal terms or
+technological measures that restrict others from exercising the rights granted
+by the licence.
+
+Licence summary:
+https://creativecommons.org/licenses/by/4.0/
+
+Canonical legal code:
+https://creativecommons.org/licenses/by/4.0/legalcode.en
+
+The canonical Creative Commons legal code governs this licence. No warranties
+are given.

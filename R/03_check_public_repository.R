@@ -40,6 +40,16 @@ must_exist <- function(paths, label) {
   }
 }
 
+release_files <- c(
+  root_path("README.md"),
+  root_path("CITATION.cff"),
+  root_path("LICENSE.md"),
+  root_path("LICENSES", "MIT.txt"),
+  root_path("LICENSES", "CC-BY-4.0.txt"),
+  root_path("figures", "main", "fig8_chatelperronian_assemblage_foradada.tiff")
+)
+must_exist(release_files, "Release file")
+
 corpus_path <- root_path("data", "final", "pmps_ne_iberia_dated_corpus.csv")
 must_exist(corpus_path, "Final corpus")
 must_exist(root_path("R", "04_reproduce_discussion_figure.R"), "Discussion figure script")

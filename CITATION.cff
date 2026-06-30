@@ -5,8 +5,10 @@ type: dataset
 authors:
   - family-names: "Morales"
     given-names: "Juan Ignacio"
+    orcid: "https://orcid.org/0000-0002-8253-414X"
   - family-names: "Soto Quesada"
     given-names: "María"
+    orcid: "https://orcid.org/0000-0003-4154-5384"
 abstract: "Data, OxCal models, R scripts, figures and tables supporting a chronological study of the Middle-to-Upper Palaeolithic transition in northeastern Iberia."
 keywords:
   - "Middle Palaeolithic"
