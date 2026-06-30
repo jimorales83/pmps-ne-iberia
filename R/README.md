@@ -19,10 +19,22 @@ Advanced users can also run the scripts separately:
 1. `R/03_check_public_repository.R`
 2. `R/02_reproduce_oxcal_figures.R`
 3. `R/01_reproduce_rcarbon_figures.R`
+4. `R/04_reproduce_discussion_figure.R`
 
-The rcarbon script recalculates CKDE/SPD figures from `data/final/pmps_ne_iberia_dated_corpus.csv`. The OxCal script redraws Results figures R2-R4 from `oxcal/regional_outputs/*.csv`.
+The rcarbon script recalculates CKDE/SPD figures from `data/final/pmps_ne_iberia_dated_corpus.csv`. Analytical subsets are sorted by stable site, level and laboratory-code keys before stochastic sampling, so the fixed seed is independent of the physical row order in the input file. The OxCal script redraws Results figures R2-R4 from `oxcal/regional_outputs/*.csv`. The discussion-figure script redraws Figure 7 from the curated archaeological tables in `tables/main/`, the site coordinates in `data/final/` and the documented NGRIP/GICC05 subset in `tables/main/climate/`.
 
-The scripts were tested with R 4.5.2. Required packages are `dplyr`, `ggplot2`, `readr`, `rcarbon`, `stringr` and `tibble`.
+The main analytical outputs are written as `fig3_results_R1_human_presence_structure_main`, `fig4_results_R2_final_mp_post_mp_main`, `fig5_results_R3_final_mp_sensitivity_main` and `fig6_results_R4_chat_proto_early_aurignacian_main`. Figures 4-6 use compact shared keys for posterior intervals and analytical categories; in Figures 4 and 6 both key rows use the same aligned starting column. Figure 3 retains the distinct CKDE curve grammar while sharing typography and panel-title conventions.
+
+The scripts were tested with R 4.5.2 and these package versions:
+
+- `dplyr` 1.2.1
+- `ggplot2` 4.0.3
+- `readr` 2.2.0
+- `rcarbon` 1.5.2
+- `stringr` 1.6.0
+- `tibble` 3.3.1
+
+`grid` is used from the standard R installation. A complete `sessionInfo()` is written to `reproduction_outputs/session_info.txt` after each guided run.
 
 Optional environment variables:
 

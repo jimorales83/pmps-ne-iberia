@@ -42,6 +42,7 @@ must_exist <- function(paths, label) {
 
 corpus_path <- root_path("data", "final", "pmps_ne_iberia_dated_corpus.csv")
 must_exist(corpus_path, "Final corpus")
+must_exist(root_path("R", "04_reproduce_discussion_figure.R"), "Discussion figure script")
 
 if (file.exists(corpus_path)) {
   corpus <- read_public_corpus()
@@ -56,11 +57,73 @@ if (file.exists(corpus_path)) {
   )
 }
 
+discussion_figure_sources <- c(
+  root_path("tables", "main", "fig_discussion_regional_evidence_bins.csv"),
+  root_path("tables", "main", "fig_discussion_regional_modelled_context_spans.csv"),
+  root_path("tables", "main", "fig_discussion_regional_modelled_context_spans_manifest.csv"),
+  root_path("data", "final", "pmps_ne_iberia_site_coordinates.csv"),
+  root_path("tables", "main", "climate", "fig_discussion_climate_ngrip_d18o_50_29ka.csv")
+)
+must_exist(discussion_figure_sources, "Discussion figure source")
+notes <- c(notes, paste0("Discussion figure source files: ", sum(file.exists(discussion_figure_sources))))
+
 site_files <- list.files(root_path("data", "site_normalized"), pattern = "\\.csv$", full.names = TRUE)
 if (length(site_files) == 0) {
   errors <- c(errors, "No site-normalized CSV files found.")
 } else {
   notes <- c(notes, paste0("Site-normalized CSV files: ", length(site_files)))
+
+  corpus_raw <- read_delim(
+    corpus_path,
+    delim = ";",
+    col_types = cols(.default = col_character()),
+    na = character(),
+    show_col_types = FALSE
+  )
+  site_tables <- lapply(
+    site_files,
+    read_csv,
+    col_types = cols(.default = col_character()),
+    na = character(),
+    show_col_types = FALSE
+  )
+
+  invalid_schema <- basename(site_files)[
+    !vapply(site_tables, function(x) identical(names(x), names(corpus_raw)), logical(1))
+  ]
+  if (length(invalid_schema) > 0) {
+    errors <- c(
+      errors,
+      paste0("Site-normalized schema differs from the final corpus: ", paste(invalid_schema, collapse = "; "))
+    )
+  } else {
+    row_signature <- function(x) {
+      apply(as.data.frame(x, stringsAsFactors = FALSE), 1, paste, collapse = "\u001f")
+    }
+    site_corpus <- bind_rows(site_tables)
+    if (
+      nrow(site_corpus) != nrow(corpus_raw) ||
+        !identical(sort(row_signature(site_corpus)), sort(row_signature(corpus_raw)))
+    ) {
+      errors <- c(errors, "Site-normalized files are not an exact partition of the final corpus.")
+    }
+  }
+}
+
+span_manifest_path <- root_path(
+  "tables", "main", "fig_discussion_regional_modelled_context_spans_manifest.csv"
+)
+if (file.exists(span_manifest_path)) {
+  span_manifest <- read_csv(span_manifest_path, show_col_types = FALSE)
+  missing_span_sources <- span_manifest$source_file[
+    !file.exists(root_path(span_manifest$source_file))
+  ]
+  if (length(missing_span_sources) > 0) {
+    errors <- c(
+      errors,
+      paste0("Discussion-figure provenance paths missing: ", paste(unique(missing_span_sources), collapse = "; "))
+    )
+  }
 }
 
 oxcal_models <- list.files(root_path("oxcal", "regional_models"), pattern = "\\.oxcal$", full.names = TRUE)
@@ -84,10 +147,50 @@ notes <- c(
   paste0("Local OxCal outputs/posterior exports: ", length(local_outputs))
 )
 
+for (model in c(oxcal_models, local_models)) {
+  model_text <- readLines(model, warn = FALSE, encoding = "UTF-8")
+  if (
+    length(model_text) < 5 ||
+      !any(grepl("Plot\\(\\)", model_text)) ||
+      sum(lengths(regmatches(model_text, gregexpr("\\{", model_text)))) !=
+        sum(lengths(regmatches(model_text, gregexpr("\\}", model_text))))
+  ) {
+    errors <- c(errors, paste0("OxCal model appears incomplete or malformed: ", model))
+  }
+}
+
 for (output in oxcal_outputs) {
   first_lines <- readLines(output, n = 4, warn = FALSE)
   if (length(first_lines) < 3) {
     errors <- c(errors, paste0("OxCal output appears incomplete: ", output))
+  }
+}
+
+local_manifest_path <- root_path("oxcal", "local_model_manifest.csv")
+must_exist(local_manifest_path, "Local OxCal manifest")
+
+if (file.exists(local_manifest_path)) {
+  local_manifest <- read_csv(local_manifest_path, show_col_types = FALSE)
+  missing_local_files <- local_manifest$file[
+    !file.exists(root_path(local_manifest$file))
+  ]
+  paired_outputs <- local_manifest$paired_output[
+    !is.na(local_manifest$paired_output) & local_manifest$paired_output != ""
+  ]
+  missing_paired_outputs <- paired_outputs[
+    !file.exists(root_path(paired_outputs))
+  ]
+  if (length(missing_local_files) > 0) {
+    errors <- c(
+      errors,
+      paste0("Local OxCal manifest files missing: ", paste(unique(missing_local_files), collapse = "; "))
+    )
+  }
+  if (length(missing_paired_outputs) > 0) {
+    errors <- c(
+      errors,
+      paste0("Local OxCal paired outputs missing: ", paste(unique(missing_paired_outputs), collapse = "; "))
+    )
   }
 }
 

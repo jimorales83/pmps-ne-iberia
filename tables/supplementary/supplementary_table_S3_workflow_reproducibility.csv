@@ -1,9 +1,9 @@
 Analytical step,Choice,Implementation
-Dataset,Publication dataset,data/derived/phase2/dataset_publication_v1.xlsx.
+Dataset,Harmonised public dataset,data/final/pmps_ne_iberia_dated_corpus.csv and .xlsx; normalised site files in data/site_normalized/.
 Corpus structure,Layered analytical corpus,"Evaluated corpus, regional corpus, comparable 14C base, human-presence subset and diagnostic subset."
 Calibration,Radiocarbon calibration,IntCal20 for terrestrial dates; Marine20 for marine shell dates with the reservoir corrections used in the local models.
 Binning,Site-level archaeological contexts,Dates from the same archaeological context are grouped to reduce over-weighting.
 Exploratory summaries,CKDE and SPD,Main curves use the 45-25 ka 14C BP input window and are plotted from 50 to 25 ka cal BP.
 CKDE checks,Smoothing and binning sensitivity,"Main bandwidth is 200 yr, checked against 100 and 300 yr and against unbinned curves."
 Bayesian modelling,Targeted OxCal model family,"Local sequence structure is carried into regional models focused on order, separation and sensitivity."
-Reproducibility,Repository outputs,"Data, scripts, OxCal code, tables and figures are retained with the project outputs."
+Reproducibility,Repository outputs,"R/run_reproduction.R writes check outputs to reproduction_outputs/; OxCal code and exported outputs are retained under oxcal/; publication files are retained under figures/ and tables/."

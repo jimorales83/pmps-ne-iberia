@@ -30,7 +30,7 @@ library(ggplot2)
 library(grid)
 library(readr)
 
-script_build <- "public_rcarbon_figures_v1"
+script_build <- "public_rcarbon_figures_v3"
 cat("\nRunning ", script_build, "\n", sep = "")
 
 write_tiff <- tolower(Sys.getenv("PMPS_WRITE_TIFF", "true")) %in% c("1", "true", "yes")
@@ -56,7 +56,8 @@ rc_subset <- function(flag) {
       in_main_14c_window,
       !is.na(curve_std),
       curve_std != ""
-    )
+    ) |>
+    arrange(site, level_unit, lab_code)
 }
 
 df_14c_primary <- rc_subset("use_14c_primary") |>
@@ -98,12 +99,12 @@ count_structure <- function(data, grouping_var) {
 
 base_theme_main <- theme_classic(base_size = 9) +
   theme(
-    plot.title = element_text(size = 10, face = "bold", hjust = 0),
+    plot.title = element_text(size = 9.5, face = "bold", hjust = 0),
     plot.title.position = "plot",
     legend.position = "top",
-    legend.title = element_blank(),
-    legend.key.width = unit(10, "mm"),
-    legend.text = element_text(size = 8),
+    legend.title = element_text(size = 7.3, face = "bold"),
+    legend.key.width = unit(13, "mm"),
+    legend.text = element_text(size = 7.2),
     legend.margin = margin(b = 1),
     legend.box.margin = margin(b = 1),
     axis.title = element_text(size = 9),
@@ -148,9 +149,9 @@ series_linetypes <- c(
 )
 
 series_plot_labels <- c(
-  "Human-presence subset" = "Human-presence subset",
-  "Diagnostic chrono-cultural subset" = "Diagnostic chrono-cultural subset",
-  "Non-diagnostic human-presence layer" = "Non-diagnostic human-presence layer"
+  "Human-presence subset" = "Human-presence",
+  "Diagnostic chrono-cultural subset" = "Diagnostic chrono-cultural",
+  "Non-diagnostic human-presence layer" = "Non-diagnostic layer"
 )
 
 diagnostic_layers <- list(
@@ -183,8 +184,16 @@ p_fig_a <- ggplot(
   aes(x = age_ka_cal_bp, y = density, colour = series, linetype = series)
 ) +
   geom_line(linewidth = 0.68, lineend = "round") +
-  scale_colour_manual(values = series_cols, labels = series_plot_labels) +
-  scale_linetype_manual(values = series_linetypes, labels = series_plot_labels) +
+  scale_colour_manual(
+    name = "Analytical subset",
+    values = series_cols,
+    labels = series_plot_labels
+  ) +
+  scale_linetype_manual(
+    name = "Analytical subset",
+    values = series_linetypes,
+    labels = series_plot_labels
+  ) +
   guides(
     colour = guide_legend(nrow = 2, byrow = TRUE),
     linetype = guide_legend(nrow = 2, byrow = TRUE)
@@ -196,7 +205,7 @@ p_fig_a <- ggplot(
   ) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.05))) +
   labs(
-    title = "A",
+    title = "A. Structure of the dated radiocarbon record",
     x = "Age (ka cal BP)",
     y = "Area-normalised CKDE density"
   ) +
@@ -260,7 +269,7 @@ component_positions <- data.frame(
   mutate(
     component_label = case_when(
       as.character(component) == "Non-diagnostic human-presence layer" ~
-        "Non-diagnostic human-presence layer",
+        "Non-diagnostic layer",
       TRUE ~ as.character(component)
     )
   )
@@ -294,7 +303,7 @@ component_linetypes <- c(
 
 base_theme_components <- theme_classic(base_size = 9) +
   theme(
-    plot.title = element_text(size = 10, face = "bold", hjust = 0),
+    plot.title = element_text(size = 9.5, face = "bold", hjust = 0),
     plot.title.position = "plot",
     legend.position = "none",
     axis.title.x = element_text(size = 9),
@@ -342,7 +351,7 @@ p_fig_b <- ggplot() +
   ) +
   coord_cartesian(ylim = c(0.8, max(component_positions$y_base) + amplitude + 0.15)) +
   labs(
-    title = "B",
+    title = "B. Chrono-cultural and non-diagnostic components",
     x = "Age (ka cal BP)"
   ) +
   base_theme_components
@@ -387,7 +396,7 @@ export_combined_r1 <- function(plot_a,
 export_combined_r1(
   plot_a = p_fig_a,
   plot_b = p_fig_b,
-  path_base = file.path(fig_main_dir, "fig_results_R1_human_presence_structure_main")
+  path_base = file.path(fig_main_dir, "fig3_results_R1_human_presence_structure_main")
 )
 
 p_spd_diag <- ggplot(
@@ -395,11 +404,19 @@ p_spd_diag <- ggplot(
   aes(x = age_ka_cal_bp, y = density, colour = series, linetype = series)
 ) +
   geom_line(linewidth = 0.68, lineend = "round") +
-  scale_colour_manual(values = series_cols, labels = series_plot_labels) +
-  scale_linetype_manual(values = series_linetypes, labels = series_plot_labels) +
+  scale_colour_manual(
+    name = "Analytical subset",
+    values = series_cols,
+    labels = series_plot_labels
+  ) +
+  scale_linetype_manual(
+    name = "Analytical subset",
+    values = series_linetypes,
+    labels = series_plot_labels
+  ) +
   guides(
-    colour = guide_legend(nrow = 2, byrow = TRUE),
-    linetype = guide_legend(nrow = 2, byrow = TRUE)
+    colour = guide_legend(nrow = 1, byrow = TRUE),
+    linetype = guide_legend(nrow = 1, byrow = TRUE)
   ) +
   scale_x_reverse(
     limits = time_range_ka,
@@ -411,7 +428,8 @@ p_spd_diag <- ggplot(
     x = "Age (ka cal BP)",
     y = "Area-normalised SPD density"
   ) +
-  base_theme_main
+  base_theme_main +
+  theme(legend.title = element_blank())
 
 export_figure(
   p_spd_diag,

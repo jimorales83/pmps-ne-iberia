@@ -1,9 +1,9 @@
 Model or series,Canonical output(s),Question,Main components,Agreement
 M1,M1_regional_cultural_backbone_baseline_v2,Open regional backbone.,AR; FO; ARB; GR,159.4 / 162.3
 M2,M2_regional_ordered_succession_null_v1,Strict succession stress test.,AR; FO; ARB; GR,7.9 / 11.5
-M3,M3_transition_core_baseline_v1,Reduced transition-core model.,AR; FO; ARB; CGSL/497D,159.4 / 162.4
+M3,M3_transition_core_baseline_v1,"Transition-core model spanning final MP, Châtelperronian, Protoaurignacian, 497D and earliest Aurignacian nodes.",AR; FO; ARB; CGSL/S1B/497D,159.4 / 162.4
 M3-497D series,M3-S1_497D_after_chat_v1; M3-S2_497D_before_FOIIIc_v1; M3-S3_497D_sync_with_chat_v1; M3-S4a_497D_after_ARProto_v1,Alternative placements for 497D.,M3 backbone plus alternative 497D constraints,S1 154.0 / 158.5; S2 157.5 / 162.6; S3 160.4 / 163.6; S4a 156.7 / 161.4
-M4-CP series,M4-CP-S1_ARProto_before_Chat_v1; M4-CP-S2_ARProto_sync_with_Chat_v1,Châtelperronian/Protoaurignacian relationship.,M3 backbone plus AR Proto and FO Chat constraints,S1 157.4 / 163.2; S2 152.6 / 156.3
+M4-CP series,M4-CP-S1_ARProto_before_Chat_v1; M4-CP-S2_ARProto_sync_with_Chat_v1,Châtelperronian/Protoaurignacian relationship.,M3 backbone plus Abric Romaní Level A and Cova Foradada IV.1-IV constraints,S1 157.4 / 163.2; S2 152.6 / 156.3
 M4-CY series,M4-CY-S1_Canyars_comparator_baseline_v1; M4-CY-S2_Canyars_after_ARProto_v1; M4-CY-S3_Canyars_before_FOIIIc_v1,Canyars as contextual comparator.,M3 backbone plus Canyars,S1 153.0 / 159.4; S2 153.5 / 158.9; S3 151.3 / 157.1
 M4-GE-S1,M4-GE-S1_Gegant_comparator_baseline_v1,Gegant as level-based comparator.,M3 backbone plus Gegant levels,167.6 / 149.3
 M5-FPM series,M5-FPM-S1_regional_PM_end_baseline_v1; M5-FPM-S2_regional_PM_end_refined_v1,Terminal MP and immediate post-MP structure.,AR; FO; ARB; CGSL/S1B/497D; Canyars; TX; Gegant,S1 131.9 / 145.6; S2 140.6 / 144.6

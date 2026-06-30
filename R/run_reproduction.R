@@ -87,6 +87,7 @@ cat("Output folder: ", normalizePath(output_dir, winslash = "/", mustWork = FALS
 required_packages <- c(
   "dplyr",
   "ggplot2",
+  "grid",
   "readr",
   "rcarbon",
   "stringr",
@@ -115,7 +116,7 @@ library(readr)
 # 3. Inspect the dated corpus
 # -------------------------------------------------------------------------
 
-cat("Step 1/4: reading and summarising the dated corpus...\n")
+cat("Step 1/5: reading and summarising the dated corpus...\n")
 
 corpus <- read_public_corpus()
 
@@ -194,7 +195,7 @@ cat("\nSummary tables written to reproduction_outputs/tables/.\n\n")
 # 4. Check repository completeness
 # -------------------------------------------------------------------------
 
-cat("Step 2/4: checking repository contents...\n")
+cat("Step 2/5: checking repository contents...\n")
 source(file.path(script_dir, "03_check_public_repository.R"), encoding = "UTF-8")
 cat("\n")
 
@@ -215,12 +216,16 @@ if (isTRUE(QUICK_TEST)) {
   cat("This step can take several minutes.\n\n")
 }
 
-cat("Step 3/4: generating OxCal-based figures R2-R4...\n")
+cat("Step 3/5: generating OxCal-based figures R2-R4...\n")
 source(file.path(script_dir, "02_reproduce_oxcal_figures.R"), encoding = "UTF-8")
 cat("\n")
 
-cat("Step 4/4: generating CKDE/SPD figures from the dated corpus...\n")
+cat("Step 4/5: generating CKDE/SPD figures from the dated corpus...\n")
 source(file.path(script_dir, "01_reproduce_rcarbon_figures.R"), encoding = "UTF-8")
+cat("\n")
+
+cat("Step 5/5: generating the discussion evidence-structure figure...\n")
+source(file.path(script_dir, "04_reproduce_discussion_figure.R"), encoding = "UTF-8")
 cat("\n")
 
 # -------------------------------------------------------------------------

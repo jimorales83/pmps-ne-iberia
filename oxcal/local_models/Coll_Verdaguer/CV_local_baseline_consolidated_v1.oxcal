@@ -1,1 +1,62 @@
-Pero para recorte al ras continuo, irá bien? o mejor algo tipo: Braun Recortadora Todo En Uno Series 7 AIO7585
+Plot()
+{
+  Curve("Atmospheric","intcal20.14c");
+  Outlier_Model("General", T(5), U(0,4), "t");
+
+  Sequence("CV_local_baseline_consolidated_v1")
+  {
+    Date("UEVA 843_LSU_max", N(-88383, 4000))
+    {
+      Outlier("General",0.05);
+    };
+
+    Boundary("Start DCU infill");
+
+    Phase("Unit 3")
+    {
+      Date("ET27_Unit3_ESR", N(-41883, 3000))
+      {
+        Outlier("General",0.05);
+      };
+      Date("ET33_Unit3_ESR", N(-44383, 2600))
+      {
+        Outlier("General",0.05);
+      };
+    };
+
+    Boundary("Transition Unit 3_2");
+
+    Phase("Unit 2")
+    {
+      R_Date("OxA-23638", 38000, 550)
+      {
+        Outlier("General",0.05);
+      };
+      Date("MAD-4960_Unit2_TL", N(-44583, 4200))
+      {
+        Outlier("General",0.05);
+      };
+    };
+
+    Boundary("Transition Unit 2_1");
+
+    Phase("Unit 1")
+    {
+      R_Date("OxA-23637", 37600, 550)
+      {
+        Outlier("General",0.05);
+      };
+      Date("ET32_Unit1_ESR", N(-44083, 7400))
+      {
+        Outlier("General",0.05);
+      };
+    };
+
+    Boundary("End DCU infill");
+
+    Date("6106_UFU_base_min", N(-36330, 2245))
+    {
+      Outlier("General",0.05);
+    };
+  };
+};

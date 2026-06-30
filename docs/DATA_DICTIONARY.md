@@ -1,10 +1,14 @@
-# Data Dictionary Draft
+# Data Dictionary
 
-The final corpus is stored as a semicolon-delimited CSV:
+The canonical corpus is the semicolon-delimited UTF-8 CSV:
 
 `data/final/pmps_ne_iberia_dated_corpus.csv`
 
-Current fields:
+The XLSX file in the same folder contains the same 185 records and 29 fields. Files in `data/site_normalized/` are exact site-level partitions of this corpus, not independent datasets.
+
+Empty cells represent information that is not applicable or was not reported. Analytical inclusion fields use `yes` and `no`.
+
+## Fields
 
 - `site`: site name.
 - `site_code`: short site code.
@@ -35,5 +39,3 @@ Current fields:
 - `use_human_presence`: inclusion flag for the human-presence subset.
 - `use_cultural_subset`: inclusion flag for the diagnostic chrono-cultural subset.
 - `selection_note`: short selection or exclusion note.
-
-Internal working-note traceability fields are not included in the public corpus. This dictionary should be checked against the final manuscript terminology before release.

@@ -1,25 +1,35 @@
 # PMPS NE Iberia
 
-Public companion repository for a paper on the chronology of the Middle-to-Upper Palaeolithic transition in northeastern Iberia.
+Data, chronological models, figures and tables supporting the paper *The Middle-to-Upper Palaeolithic transition in northeastern Iberia as a non-linear regional system*.
 
-This repository is being prepared as a clean, citable release. It contains the final dated corpus, selected OxCal model code and outputs, and the figures and tables used in the manuscript. It deliberately excludes working notes, manuscript drafts, exploratory outputs, local editor files, and the research vault used during project development.
+This is the release-candidate public repository. It contains the dated corpus used in the analyses, the retained OxCal models and outputs, the R reproduction workflow, and the publication tables and figures that can be redistributed. Private working notes, manuscript drafts and superseded exploratory material are intentionally excluded.
 
 ## Contents
 
-- `data/final/`: unified dated corpus used in the paper.
-- `data/site_normalized/`: normalized site-level tables retained for traceability.
+- `data/final/`: canonical unified dated corpus used in the paper, in CSV and XLSX formats.
+- `data/site_normalized/`: exact site-level partitions of the canonical corpus, retained for traceability.
 - `oxcal/`: regional and local OxCal model code, outputs and model inventories.
-- `figures/`: paper-ready main and supplementary figures.
-- `tables/`: paper-ready main and supplementary tables.
-- `R/`: minimal scripts for checking the public repository and reproducing the analytical figures.
-- `docs/`: public documentation and release notes.
+- `figures/`: redistributable paper-ready main and supplementary figures.
+- `tables/`: paper-ready main and supplementary tables, including figure-source tables where a figure is built from curated intermediate data.
+- `R/`: minimal scripts for checking the repository and reproducing Figures 3-7 and the supplementary analytical figures.
+- `docs/`: data dictionary.
 
-For the simplest reproduction workflow, open `R/run_reproduction.R` in RStudio and click **Source**. It writes all check outputs to `reproduction_outputs/` without overwriting the paper-ready figures.
+The semicolon-delimited CSV in `data/final/` is the canonical machine-readable dataset. The XLSX copy and the ten files in `data/site_normalized/` contain the same records.
 
-## Current Status
+## Reproduce the analyses
 
-Draft public repository skeleton. The final release should be archived in Zenodo and cited through the Zenodo DOI. The GitHub repository should remain the navigable version of the same release.
+Open `R/run_reproduction.R` in RStudio and click **Source**. The workflow checks repository integrity and writes regenerated figures and summary tables to `reproduction_outputs/` without overwriting the paper-ready files.
+
+The default run uses the paper settings for the main figures and the key CKDE/SPD check. See `R/README.md` for package versions and optional sensitivity runs.
 
 ## Reproducibility Scope
 
-The repository is intended to support audit and reproduction of the published analyses, not to reproduce the full private research workflow. Local working notes, exploratory scripts, historical model variants and manuscript drafts are intentionally omitted.
+The repository supports audit and reproduction from the harmonised publication dataset onward. It does not reproduce the original transcription of published measurements or the full private research workflow.
+
+The OxCal model code and exported outputs are preserved for audit. The R workflow redraws the analytical figures from the final corpus, the OxCal CSV exports and the documented figure-source tables; it does not run OxCal itself. Figure 1 is a GIS composition and Figure 2 is a conceptual workflow diagram.
+
+Figure 8 contains material adapted from third-party publications and is not redistributed here pending confirmation of reuse rights.
+
+## Citation and release
+
+Citation metadata are provided in `CITATION.cff`. The submitted release should be archived in Zenodo and cited through its version-specific DOI; that DOI should be added to this README and to `CITATION.cff` once minted.

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use these data, models or scripts, please cite the associated article and archived repository release."
+title: "PMPS NE Iberia: data and chronological models"
+type: dataset
+authors:
+  - family-names: "Morales"
+    given-names: "Juan Ignacio"
+  - family-names: "Soto Quesada"
+    given-names: "María"
+abstract: "Data, OxCal models, R scripts, figures and tables supporting a chronological study of the Middle-to-Upper Palaeolithic transition in northeastern Iberia."
+keywords:
+  - "Middle Palaeolithic"
+  - "Upper Palaeolithic"
+  - "radiocarbon"
+  - "Bayesian modelling"
+  - "OxCal"
+  - "Iberian Peninsula"
