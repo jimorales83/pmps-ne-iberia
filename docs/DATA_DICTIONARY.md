@@ -8,6 +8,13 @@ The XLSX file in the same folder contains the same 185 records and 29 fields. Fi
 
 Empty cells represent information that is not applicable or was not reported. Analytical inclusion fields use `yes` and `no`.
 
+## Analytical Conventions
+
+- `site_code` is the stable key linking the corpus, site-level files and coordinate table; display names may differ slightly between products.
+- Analytical flags are used together with `evaluation_final == "include"`; a `yes` flag alone does not override the final evaluation.
+- The exploratory radiocarbon figures use conventional radiocarbon ages from 45-25 ka 14C BP and then plot the calibrated distributions over 50-25 ka cal BP.
+- `same_sample_group` identifies repeated measurements of the same sample so that they are not treated as independent evidence.
+
 ## Fields
 
 - `site`: site name.

@@ -2,7 +2,7 @@
 
 Data, chronological models, figures and tables supporting the paper *The Middle-to-Upper Palaeolithic transition in northeastern Iberia as a non-linear regional system*.
 
-This is the release-candidate public repository. It contains the dated corpus used in the analyses, the retained OxCal models and outputs, the R reproduction workflow, and the publication tables and figures that can be redistributed. Private working notes, manuscript drafts and superseded exploratory material are intentionally excluded.
+This repository contains the dated corpus used in the analyses, the retained OxCal models and outputs, the R reproduction workflow, and the publication tables and figures that can be redistributed. Private working notes, manuscript drafts and superseded exploratory material are intentionally excluded.
 
 ## Contents
 
@@ -35,4 +35,4 @@ Code in `R/` and OxCal model scripts is released under the MIT License. Data, do
 
 ## Citation and release
 
-Citation metadata are provided in `CITATION.cff`. The submitted release should be archived in Zenodo and cited through its version-specific DOI; that DOI should be added to this README and to `CITATION.cff` once minted.
+Citation metadata are provided in `CITATION.cff`. The first versioned release will be archived in Zenodo and cited through its version-specific DOI; that DOI will then be added to this README and to `CITATION.cff`.

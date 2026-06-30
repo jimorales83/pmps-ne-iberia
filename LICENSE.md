@@ -14,10 +14,13 @@ Unless a source-specific notice states otherwise, the authors' data, documentati
 
 When reusing these materials, cite the archived repository release and the associated article, credit the authors, link to the licence and indicate whether changes were made.
 
+For chronological measurements compiled from the literature, CC BY 4.0 applies to the authors' harmonisation, selection, annotations and database structure. The underlying measurements retain the provenance stated in the `reference` field.
+
 ## Source-specific notices
 
 - Figure 1 incorporates EMODnet Bathymetry and ICGC data under CC BY 4.0 and Natural Earth data in the public domain. Full source links are provided in `figures/README.md`.
-- Figure 8 is an author-prepared composition adapted from Morales et al. (2019, Figs. 15-16), originally published under CC BY 4.0: https://doi.org/10.1371/journal.pone.0215832.
+- Figure 7 incorporates the NGRIP/GICC05 climate dataset. Its source and DOI are documented in `tables/main/climate/README.md`.
+- Figure 8 is an author-prepared composition adapted from Morales et al. (2019, Figs. 15-16 and S5), originally published under CC BY 4.0: https://doi.org/10.1371/journal.pone.0215832.
 - Citations and bibliographic references identify third-party scholarship; this repository does not claim rights over the underlying publications.
 
 Copyright remains with Juan Ignacio Morales and María Soto Quesada. The licences grant reuse permissions; they do not transfer authorship or imply endorsement.
