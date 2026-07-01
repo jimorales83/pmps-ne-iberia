@@ -2,6 +2,9 @@ cff-version: 1.2.0
 message: "If you use these data, models or scripts, please cite the associated article and archived repository release."
 title: "PMPS NE Iberia: data and chronological models"
 type: dataset
+version: "1.0.0"
+date-released: "2026-07-01"
+repository-code: "https://github.com/jimorales83/pmps-ne-iberia"
 authors:
   - family-names: "Morales"
     given-names: "Juan Ignacio"
@@ -10,6 +13,9 @@ authors:
     given-names: "María"
     orcid: "https://orcid.org/0000-0003-4154-5384"
 abstract: "Data, OxCal models, R scripts, figures and tables supporting a chronological study of the Middle-to-Upper Palaeolithic transition in northeastern Iberia."
+license:
+  - "CC-BY-4.0"
+  - "MIT"
 keywords:
   - "Middle Palaeolithic"
   - "Upper Palaeolithic"
