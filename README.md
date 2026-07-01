@@ -1,5 +1,7 @@
 # PMPS NE Iberia
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21101127.svg)](https://doi.org/10.5281/zenodo.21101127)
+
 Data, chronological models, figures and tables supporting the paper *The Middle-to-Upper Palaeolithic transition in northeastern Iberia as a non-linear regional system*.
 
 This repository contains the dated corpus used in the analyses, the retained OxCal models and outputs, the R reproduction workflow, and the publication tables and figures that can be redistributed. Private working notes, manuscript drafts and superseded exploratory material are intentionally excluded.
@@ -35,4 +37,10 @@ Code in `R/` and OxCal model scripts is released under the MIT License. Data, do
 
 ## Citation and release
 
-Citation metadata are provided in `CITATION.cff`. The first versioned release will be archived in Zenodo and cited through its version-specific DOI; that DOI will then be added to this README and to `CITATION.cff`.
+Citation metadata are provided in `CITATION.cff`. The archived `v1.0.0`
+release is available from Zenodo:
+
+- Version DOI: https://doi.org/10.5281/zenodo.21101127
+- Concept DOI for all versions: https://doi.org/10.5281/zenodo.21101126
+
+Use the version DOI when citing the exact materials supporting the paper.

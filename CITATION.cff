@@ -5,6 +5,14 @@ type: dataset
 version: "1.0.0"
 date-released: "2026-07-01"
 repository-code: "https://github.com/jimorales83/pmps-ne-iberia"
+doi: "10.5281/zenodo.21101127"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21101126"
+    description: "Concept DOI for all versions of this research compendium."
+  - type: doi
+    value: "10.5281/zenodo.21101127"
+    description: "Version-specific DOI for release v1.0.0."
 authors:
   - family-names: "Morales"
     given-names: "Juan Ignacio"
