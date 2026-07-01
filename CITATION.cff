@@ -13,9 +13,7 @@ authors:
     given-names: "María"
     orcid: "https://orcid.org/0000-0003-4154-5384"
 abstract: "Data, OxCal models, R scripts, figures and tables supporting a chronological study of the Middle-to-Upper Palaeolithic transition in northeastern Iberia."
-license:
-  - "CC-BY-4.0"
-  - "MIT"
+license: "CC-BY-4.0"
 keywords:
   - "Middle Palaeolithic"
   - "Upper Palaeolithic"
